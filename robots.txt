@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://blindso.github.io/hsol-site/sitemap.xml

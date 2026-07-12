@@ -2,44 +2,41 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>좋은 프롬프트의 4요소 — 무료 전문 공개 | H.Sol</title>
-<meta name="description" content="ChatGPT 답의 급을 바꾸는 10분. 역할·맥락·지시·출력형식 4요소 원리 전체 + 바로 쓰는 프롬프트 10개 무료 공개.">
-<meta property="og:title" content="좋은 프롬프트의 4요소 — 무료 전문 공개 | H.Sol">
-<meta property="og:description" content="ChatGPT 답의 급을 바꾸는 10분. 원리 전체 + 복붙 프롬프트 10개. 회원가입 없음.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://blindso.github.io/hsol-site/free/prompt-4elements.html">
-<link rel="canonical" href="https://blindso.github.io/hsol-site/free/prompt-4elements.html">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%231B2A4A%22/><text x=%2250%22 y=%2268%22 font-size=%2252%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22%23F5A623%22>H</text></svg>">
+<title>좋은 프롬프트의 4요소 — H.Sol 무료 배포판</title>
 <style>
 :root{--navy:#1B2A4A;--gold:#F5A623;--warm:#F4F1EC;--ink:#1A1A1A}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR",sans-serif;color:var(--ink);background:#fff;line-height:1.85}
-.top{background:var(--navy);color:#fff;padding:40px 0}
-.top .wrap p{color:var(--gold);font-size:13px;font-weight:700;margin-bottom:8px}
-.top h1{font-size:26px;font-weight:800;line-height:1.4}
-.wrap{max-width:680px;margin:0 auto;padding:0 24px}
-main{padding:40px 0 64px}
-h2{font-size:21px;color:var(--navy);font-weight:800;margin:44px 0 14px;padding-top:20px;border-top:3px solid var(--warm)}
-h3{font-size:17px;color:var(--navy);margin:26px 0 8px}
-p{margin-bottom:12px;font-size:16px}
-ul{margin:0 0 14px 22px}
-li{margin-bottom:6px;font-size:15.5px}
-pre.prompt{background:var(--navy);color:#fff;border-radius:10px;padding:18px 20px;font-size:14.5px;line-height:1.7;overflow-x:auto;margin:14px 0;font-family:"SF Mono",Menlo,monospace;white-space:pre-wrap}
-.note{background:var(--warm);border-left:4px solid var(--gold);border-radius:0 10px 10px 0;padding:14px 18px;margin:16px 0}
-.note p{font-size:14.5px;margin-bottom:6px}
-hr{border:none;border-top:2px dashed #ddd;margin:36px 0}
+@page{size:A4;margin:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;color:var(--ink);line-height:1.8}
+.cover{height:100vh;background:var(--navy);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:60px;page-break-after:always}
+.cover .badge{color:var(--gold);font-weight:700;font-size:14px;margin-bottom:18px;letter-spacing:1px}
+.cover h1{font-size:38px;font-weight:800;line-height:1.4;margin-bottom:16px}
+.cover h1 em{color:var(--gold);font-style:normal}
+.cover p.sub{font-size:16px;opacity:.85;margin-bottom:40px}
+.cover .share{border:1px solid var(--gold);color:var(--gold);display:inline-block;padding:8px 18px;border-radius:20px;font-size:13px;font-weight:700;align-self:flex-start}
+.body{padding:48px 56px}
+h2{font-size:20px;color:var(--navy);font-weight:800;margin:34px 0 12px;padding-top:16px;border-top:3px solid var(--warm);page-break-after:avoid}
+h3{font-size:16px;color:var(--navy);margin:20px 0 6px;page-break-after:avoid}
+p{margin-bottom:10px;font-size:14.5px}
+ul{margin:0 0 12px 20px} li{margin-bottom:5px;font-size:14px}
+pre.prompt{background:var(--navy);color:#fff;border-radius:10px;padding:14px 18px;font-size:13px;line-height:1.65;margin:12px 0;font-family:Menlo,monospace;white-space:pre-wrap;page-break-inside:avoid}
+.note{background:var(--warm);border-left:4px solid var(--gold);border-radius:0 10px 10px 0;padding:12px 16px;margin:14px 0;page-break-inside:avoid}
+.note p{font-size:13.5px;margin-bottom:4px}
+hr{border:none;border-top:2px dashed #ddd;margin:28px 0}
 .soon{color:var(--gold);font-weight:700}
-a{color:var(--navy)}
-.back{display:inline-block;margin-top:32px;background:var(--gold);color:var(--navy);font-weight:800;padding:12px 24px;border-radius:10px;text-decoration:none}
+.backcover{page-break-before:always;height:96vh;background:var(--navy);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:60px}
+.backcover h2{color:var(--gold);border:none;font-size:24px;margin-bottom:16px}
+.backcover p{font-size:15px;opacity:.9;margin-bottom:10px}
 </style>
 </head>
 <body>
-<div class="top"><div class="wrap">
-<p>H.Sol 실전 시리즈 · 무료 전문 공개</p>
-<h1>좋은 프롬프트의 4요소<br>— ChatGPT 답의 급을 바꾸는 10분</h1>
-</div></div>
-<main><div class="wrap">
+<div class="cover">
+  <div class="badge">H.SOL 실전 시리즈 · 무료 배포판</div>
+  <h1>좋은 프롬프트의<br><em>4요소</em></h1>
+  <p class="sub">ChatGPT 답의 급을 바꾸는 10분 — 원리 전체 + 바로 쓰는 프롬프트 10</p>
+  <div class="share">무료 배포판 — 자유롭게 공유하세요</div>
+</div>
+<div class="body">
 <h2>1. 프롬프트가 결과를 바꾼다</h2>
 <p>ChatGPT의 답이 신통치 않을 때가 있습니다. 많은 분이 &quot;AI는 아직 부족하구나&quot; 하고 넘깁니다. 그런데 문제는 대부분 AI가 아니라 질문에 있습니다.</p>
 <h3>막연한 질문은 막연한 답을 부른다</h3>
@@ -170,8 +167,12 @@ a{color:var(--navy)}
 <hr>
 <p><em>H.Sol — 실무에서 직접 쓰고 검증한 것만 씁니다. 이 무료판은 자유롭게 공유하셔도 됩니다.</em></p>
 <p><em>Threads: 준비 중 · 블로그: 준비 중</em></p>
-<a class="back" href="ChatGPT_프롬프트_4요소_무료판_HSol.pdf" download>📥 이 자료 PDF로 받기</a>
-<a class="back" style="background:transparent;border:2px solid var(--navy);margin-left:8px" href="../index.html">← H.Sol 홈으로</a>
-</div></main>
+</div>
+<div class="backcover">
+  <h2>H.Sol — 실무에서 직접 쓰고 검증한 것만.</h2>
+  <p>숫자로 말합니다. 못 하는 건 못 한다고 말합니다. 아는 것은 돌려줍니다.</p>
+  <p>새 무료 자료와 본편 소식: <strong>blindso.github.io/hsol-site</strong></p>
+  <p style="margin-top:24px;font-size:13px;opacity:.6">이 문서는 자유롭게 공유하셔도 됩니다. 내용의 수정·재판매만 하지 말아 주세요.</p>
+</div>
 </body>
 </html>
