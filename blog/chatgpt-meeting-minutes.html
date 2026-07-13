@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChatGPT로 회의록 정리하는 법 — 녹취를 5분 만에 표 3개로 | H.Sol</title>
+<meta name="description" content="회의 녹취·메모를 ChatGPT로 정리하는 실전 방법. 결정사항·실행항목·보류 안건 3개 표로 나누는 프롬프트와, AI가 빈칸을 지어내지 않게 하는 한 줄까지.">
+<meta property="og:title" content="ChatGPT로 회의록 정리하는 법 — 녹취를 5분 만에 표 3개로">
+<meta property="og:description" content="회의 녹취를 ChatGPT로 정리하는 실전 방법. 결정사항·실행항목·보류 3개 표로.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blindso.github.io/hsol-site/blog/chatgpt-meeting-minutes.html">
+<link rel="canonical" href="https://blindso.github.io/hsol-site/blog/chatgpt-meeting-minutes.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%231B2A4A%22/><text x=%2250%22 y=%2268%22 font-size=%2252%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22%23F5A623%22>H</text></svg>">
+<style>
+:root{--navy:#1B2A4A;--gold:#F5A623;--warm:#F4F1EC;--ink:#1A1A1A}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR",sans-serif;color:var(--ink);background:#fff;line-height:1.85}
+.top{background:var(--navy);color:#fff;padding:44px 0}
+.top .wrap p.k{color:var(--gold);font-size:13px;font-weight:700;margin-bottom:8px}
+.top h1{font-size:27px;font-weight:800;line-height:1.4}
+.wrap{max-width:680px;margin:0 auto;padding:0 24px}
+main{padding:36px 0 64px}
+h2{font-size:21px;color:var(--navy);font-weight:800;margin:40px 0 12px;padding-top:18px;border-top:3px solid var(--warm)}
+h3{font-size:17px;color:var(--navy);margin:22px 0 6px}
+p{margin-bottom:12px;font-size:16px}
+ul,ol{margin:0 0 14px 22px}
+li{margin-bottom:6px;font-size:15.5px}
+pre.prompt{background:var(--navy);color:#fff;border-radius:10px;padding:18px 20px;font-size:14.5px;line-height:1.7;overflow-x:auto;margin:14px 0;font-family:"SF Mono",Menlo,monospace;white-space:pre-wrap}
+.note{background:var(--warm);border-left:4px solid var(--gold);border-radius:0 10px 10px 0;padding:14px 18px;margin:18px 0}
+.note p{font-size:14.5px;margin-bottom:6px}
+.cta{display:inline-block;background:var(--gold);color:var(--navy);font-weight:800;padding:13px 26px;border-radius:10px;text-decoration:none;margin-top:8px}
+a{color:var(--navy)}
+.back{display:inline-block;margin-top:32px;background:transparent;border:2px solid var(--navy);color:var(--navy);font-weight:800;padding:11px 24px;border-radius:10px;text-decoration:none}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ChatGPT로 회의록 정리하는 법 — 녹취를 5분 만에 표 3개로", "description": "회의 녹취·메모를 ChatGPT로 정리하는 실전 방법. 결정사항·실행항목·보류 안건 3개 표로 나누는 프롬프트와, AI가 빈칸을 지어내지 않게 하는 한 줄까지.", "author": {"@type": "Person", "name": "H.Sol"}, "publisher": {"@type": "Organization", "name": "H.Sol"}, "url": "https://blindso.github.io/hsol-site/blog/chatgpt-meeting-minutes.html", "inLanguage": "ko"}</script>
+</head>
+<body>
+<div class="top"><div class="wrap">
+<p class="k">H.SOL · 실전 가이드</p>
+<h1>ChatGPT로 회의록 정리하는 법<br>— 녹취를 5분 만에 표 3개로</h1>
+</div></div>
+<main><div class="wrap">
+
+<p>회의가 끝나면 녹취나 메모를 회의록으로 옮기는 일이 남습니다. 직장에서 가장 자주, 가장 많이 새는 반복 업무입니다. ChatGPT에 통째로 넣으면 5분이면 끝나는데, 대부분 그냥 "회의록 정리해줘"라고 물어서 뻔한 결과를 받습니다.</p>
+
+<h2>왜 "회의록 정리해줘"는 실패하는가</h2>
+<p>ChatGPT는 시키는 대로만 합니다. 막연하게 시키면 막연한 답이 돌아옵니다. 회의록이 어려운 건 내용이 아니라 <strong>구조</strong>입니다. 무엇이 결정됐고, 누가 뭘 언제까지 하고, 무엇이 보류됐는지가 섞여 있으면 다시 읽어도 안 보입니다.</p>
+<p>그래서 정리 기준을 먼저 줘야 합니다. 아래 프롬프트를 복사해 회의 내용만 붙여넣으세요.</p>
+
+<h2>바로 쓰는 프롬프트</h2>
+<pre class="prompt">당신은 회의 진행을 돕는 실무 비서입니다.
+아래 회의 내용을 3개 표로 나눠 정리해 주세요.
+1) 결정사항  2) 실행항목(담당·기한)  3) 보류 안건
+발언자 추측 금지 — 명시된 것만 적어 주세요.
+[회의 내용 붙여넣기]</pre>
+
+<h3>이 프롬프트의 핵심 3가지</h3>
+<ul>
+<li><strong>표 3개로 쪼갠다</strong> — 결정·실행·보류를 섞지 않으니 다시 읽을 때 바로 찾습니다.</li>
+<li><strong>담당·기한을 실행항목에 못 박는다</strong> — 빈칸이 보이면 회의 중에 바로 물어보게 됩니다. 회의가 짧아집니다.</li>
+<li><strong>"발언자 추측 금지"</strong> — 이 한 줄이 제일 중요합니다.</li>
+</ul>
+
+<div class="note"><p><strong>왜 "추측 금지"가 핵심인가</strong> — ChatGPT는 시키지 않으면 빈칸을 그럴듯하게 채웁니다. "김 부장이 승인했다"처럼 회의에 없던 말을 지어낼 수 있습니다. 회의록은 사실 기록이라 이게 치명적입니다. 한 줄로 막습니다.</p></div>
+
+<h2>결과가 아쉬울 때 — 운이 아니라 입력을 본다</h2>
+<p>같은 회의인데 답이 들쭉날쭉하면 AI 탓이 아닙니다. 입력이 매번 달랐을 뿐입니다. 결과가 아쉬우면 프롬프트를 다시 보세요. 예를 들어:</p>
+<ul>
+<li>실행항목에 기한이 안 들어가면 → "기한이 없으면 '미정'으로 표기"를 추가</li>
+<li>너무 길면 → "각 표는 5줄 이내로"를 추가</li>
+<li>다음 회의 안건이 필요하면 → "4) 다음 회의 안건 표도 추가"</li>
+</ul>
+<p>조건을 하나 바꿀 때마다 결과가 바뀝니다. 통제할 수 있다는 뜻입니다.</p>
+
+<h2>더 나아가려면 — 좋은 프롬프트의 4요소</h2>
+<p>이 회의록 프롬프트가 잘 작동하는 이유는 우연이 아닙니다. 좋은 프롬프트에는 뼈대가 있습니다 — <strong>역할·맥락·지시·출력형식</strong>. 위 프롬프트도 "당신은 실무 비서입니다(역할)", "회의 내용(맥락)", "정리해 주세요(지시)", "3개 표로(출력형식)"를 다 갖췄습니다.</p>
+<p>이 4요소를 한 번 익히면 회의록뿐 아니라 이메일·보고서·데이터 분석 어디에나 응용됩니다. 원리 전체와 바로 쓰는 프롬프트 10개를 무료로 공개해 두었습니다. 회원가입 없습니다.</p>
+<a class="cta" href="../free/prompt-4elements.html">좋은 프롬프트의 4요소 — 무료로 읽기 →</a>
+
+<h2>정리</h2>
+<ul>
+<li>"회의록 정리해줘"는 실패한다. 표 3개(결정·실행·보류)로 구조를 준다.</li>
+<li>실행항목에 담당·기한을 못 박으면 회의가 짧아진다.</li>
+<li>"발언자 추측 금지" 한 줄이 AI가 없던 말을 지어내는 걸 막는다.</li>
+<li>결과가 아쉬우면 AI가 아니라 프롬프트를 고친다.</li>
+</ul>
+
+<p style="margin-top:24px">더 많은 실전 프롬프트가 필요하다면 → <a href="../free/email-prompts.html"><strong>업무 이메일 프롬프트 5종</strong></a> · <a href="../free/excel-data-prompts.html"><strong>엑셀·데이터 프롬프트 5종</strong></a> (전부 무료)</p>
+
+<a class="back" href="../index.html">← H.Sol 홈으로</a>
+</div></main>
+</body>
+</html>
