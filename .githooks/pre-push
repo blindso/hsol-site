@@ -1,0 +1,16 @@
+#!/bin/bash
+# hsol-site 배포 전 무결성 검증 — GitHub Pages가 이 repo를 그대로 서빙하므로
+# 깨진 링크·og 누락·증명숫자 과장·제품주장 불일치·깨진 이미지 등이 그대로 공개된다.
+# marketing-os 의 verify_site(16종)로 push 전 검증한다.
+MO="/Users/pske/PSKE_AI/programs/marketing-os"
+PY="/opt/homebrew/opt/python@3.11/libexec/bin/python3"
+[ -x "$PY" ] || PY="python3"
+if [ -f "$MO/scripts/verify_site.py" ]; then
+  echo "── hsol-site 배포 전 사이트 일관성 검증(16종) ──"
+  if ! ( cd "$MO" && "$PY" scripts/verify_site.py ); then
+    echo "❌ 사이트 일관성 미달 — push 차단. 위 항목을 고치고 다시 push 하세요."
+    echo "   (긴급 우회: git push --no-verify)"
+    exit 1
+  fi
+fi
+exit 0
