@@ -29,10 +29,12 @@ ul{margin:0 0 14px 22px}li{margin-bottom:6px;font-size:15.5px}
 pre.prompt{background:var(--navy);color:#fff;border-radius:10px;padding:18px 20px;font-size:14.5px;line-height:1.7;overflow-x:auto;margin:14px 0;font-family:"SF Mono",Menlo,monospace;white-space:pre-wrap}
 .note{background:var(--warm);border-left:4px solid var(--gold);border-radius:0 10px 10px 0;padding:14px 18px;margin:18px 0}
 .cta{display:inline-block;background:var(--gold);color:var(--navy);font-weight:800;padding:13px 26px;border-radius:10px;text-decoration:none;margin-top:8px}
+.faq h3{font-size:16.5px;color:var(--navy);font-weight:700;margin:18px 0 6px}
 a{color:var(--navy)}
 .back{display:inline-block;margin-top:32px;background:transparent;border:2px solid var(--navy);color:var(--navy);font-weight:800;padding:11px 24px;border-radius:10px;text-decoration:none}</style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "프롬프트 엔지니어링이 뭔가요 — 어렵게 들리지만 결국 '잘 시키는 법'", "description": "프롬프트 엔지니어링이라고 하면 개발자만의 기술처럼 들립니다. 사실은 'AI에게 잘 시키는 법'입니다. 거창한 용어일 뿐, 핵심은 단순합니다. 무엇을·어떤 조건으로 시킬지를 분명히 하는 것입니다.", "author": {"@type": "Person", "name": "H.Sol"}, "publisher": {"@type": "Organization", "name": "H.Sol", "logo": {"@type": "ImageObject", "url": "https://blindso.github.io/hsol-site/logo.png"}}, "url": "https://blindso.github.io/hsol-site/blog/chatgpt-prompt-engineering.html", "inLanguage": "ko", "datePublished": "2026-07-13", "dateModified": "2026-07-13"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "프롬프트 엔지니어링이 뭔가요 — 어렵게 들리지만 결국 '잘 시키는 법'", "description": "프롬프트 엔지니어링이라고 하면 개발자만의 기술처럼 들립니다. 사실은 'AI에게 잘 시키는 법'입니다. 거창한 용어일 뿐, 핵심은 단순합니다. 무엇을·어떤 조건으로 시킬지를 분명히 하는 것입니다.", "author": {"@type": "Person", "name": "H.Sol"}, "publisher": {"@type": "Organization", "name": "H.Sol", "logo": {"@type": "ImageObject", "url": "https://blindso.github.io/hsol-site/logo.png"}}, "datePublished": "2026-07-13", "dateModified": "2026-07-13", "url": "https://blindso.github.io/hsol-site/blog/chatgpt-prompt-engineering.html", "inLanguage": "ko"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "H.Sol", "item": "https://blindso.github.io/hsol-site/"}, {"@type": "ListItem", "position": 2, "name": "ChatGPT 업무 활용 완전 가이드", "item": "https://blindso.github.io/hsol-site/guide.html"}, {"@type": "ListItem", "position": 3, "name": "프롬프트 엔지니어링이 뭔가요 — 어렵게 들리지만 결국 '잘 시키는 법'", "item": "https://blindso.github.io/hsol-site/blog/chatgpt-prompt-engineering.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "프롬프트 엔지니어링을 배우려면 코딩을 알아야 하나요?", "acceptedAnswer": {"@type": "Answer", "text": "아니요, 코딩은 필요 없습니다. 한국어로 명확히 지시하는 능력이면 충분합니다. 개발이 아니라 글로 시키는 기술입니다."}}, {"@type": "Question", "name": "예시를 같이 주면 정말 더 잘 되나요?", "acceptedAnswer": {"@type": "Answer", "text": "네, 원하는 결과 예시를 한두 개 붙이면 확 좋아집니다. ChatGPT가 그 형식과 톤을 그대로 따라 합니다. 말로 설명하기 어려우면 예시로 보여 주세요."}}, {"@type": "Question", "name": "프롬프트만 잘 쓰면 틀린 답도 없어지나요?", "acceptedAnswer": {"@type": "Answer", "text": "아니요, 잘 써도 사실 오류는 남습니다. 프롬프트는 방향을 잡아 줄 뿐 진실을 보장하지 않습니다. 중요한 사실은 늘 따로 확인하세요."}}]}</script>
 </head>
 <body>
 <div class="top"><div class="wrap">
@@ -73,6 +75,16 @@ a{color:var(--navy)}
 <li>용어가 거창할 뿐 원리는 일상의 지시와 같다.</li>
 <li>'지어내지 말라' 한 줄로 AI가 빈칸을 채우는 걸 막는다.</li>
 </ul>
+
+<h2>자주 묻는 질문</h2>
+<div class="faq">
+<h3>프롬프트 엔지니어링을 배우려면 코딩을 알아야 하나요?</h3>
+<p>아니요, 코딩은 필요 없습니다. 한국어로 명확히 지시하는 능력이면 충분합니다. 개발이 아니라 글로 시키는 기술입니다.</p>
+<h3>예시를 같이 주면 정말 더 잘 되나요?</h3>
+<p>네, 원하는 결과 예시를 한두 개 붙이면 확 좋아집니다. ChatGPT가 그 형식과 톤을 그대로 따라 합니다. 말로 설명하기 어려우면 예시로 보여 주세요.</p>
+<h3>프롬프트만 잘 쓰면 틀린 답도 없어지나요?</h3>
+<p>아니요, 잘 써도 사실 오류는 남습니다. 프롬프트는 방향을 잡아 줄 뿐 진실을 보장하지 않습니다. 중요한 사실은 늘 따로 확인하세요.</p>
+</div>
 
 <!-- related:start -->
 <h2>관련 글</h2>

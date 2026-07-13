@@ -29,10 +29,12 @@ ul{margin:0 0 14px 22px}li{margin-bottom:6px;font-size:15.5px}
 pre.prompt{background:var(--navy);color:#fff;border-radius:10px;padding:18px 20px;font-size:14.5px;line-height:1.7;overflow-x:auto;margin:14px 0;font-family:"SF Mono",Menlo,monospace;white-space:pre-wrap}
 .note{background:var(--warm);border-left:4px solid var(--gold);border-radius:0 10px 10px 0;padding:14px 18px;margin:18px 0}
 .cta{display:inline-block;background:var(--gold);color:var(--navy);font-weight:800;padding:13px 26px;border-radius:10px;text-decoration:none;margin-top:8px}
+.faq h3{font-size:16.5px;color:var(--navy);font-weight:700;margin:18px 0 6px}
 a{color:var(--navy)}
 .back{display:inline-block;margin-top:32px;background:transparent;border:2px solid var(--navy);color:var(--navy);font-weight:800;padding:11px 24px;border-radius:10px;text-decoration:none}</style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ChatGPT로 데이터 분석하는 법 — 숫자가 아니라 '질문'이 먼저다", "description": "데이터를 ChatGPT에 넣고 '분석해줘'라고 하면 평균·합계 같은 요약만 나옵니다. 정작 필요한 답은 안 나옵니다. 분석은 계산이 아니라 질문입니다. 무엇을 알고 싶은지가 정해져야 데이터가 답을 합니다.", "author": {"@type": "Person", "name": "H.Sol"}, "publisher": {"@type": "Organization", "name": "H.Sol", "logo": {"@type": "ImageObject", "url": "https://blindso.github.io/hsol-site/logo.png"}}, "url": "https://blindso.github.io/hsol-site/blog/chatgpt-data-analysis.html", "inLanguage": "ko", "datePublished": "2026-07-13", "dateModified": "2026-07-13"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ChatGPT로 데이터 분석하는 법 — 숫자가 아니라 '질문'이 먼저다", "description": "데이터를 ChatGPT에 넣고 '분석해줘'라고 하면 평균·합계 같은 요약만 나옵니다. 정작 필요한 답은 안 나옵니다. 분석은 계산이 아니라 질문입니다. 무엇을 알고 싶은지가 정해져야 데이터가 답을 합니다.", "author": {"@type": "Person", "name": "H.Sol"}, "publisher": {"@type": "Organization", "name": "H.Sol", "logo": {"@type": "ImageObject", "url": "https://blindso.github.io/hsol-site/logo.png"}}, "datePublished": "2026-07-13", "dateModified": "2026-07-13", "url": "https://blindso.github.io/hsol-site/blog/chatgpt-data-analysis.html", "inLanguage": "ko"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "H.Sol", "item": "https://blindso.github.io/hsol-site/"}, {"@type": "ListItem", "position": 2, "name": "ChatGPT 업무 활용 완전 가이드", "item": "https://blindso.github.io/hsol-site/guide.html"}, {"@type": "ListItem", "position": 3, "name": "ChatGPT로 데이터 분석하는 법 — 숫자가 아니라 '질문'이 먼저다", "item": "https://blindso.github.io/hsol-site/blog/chatgpt-data-analysis.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "엑셀·CSV 파일을 올려서 분석해도 되나요?", "acceptedAnswer": {"@type": "Answer", "text": "네, 파일을 올리면 표를 직접 읽고 계산합니다. 큰 파일이나 잦은 분석은 유료가 안정적입니다. 민감한 개인정보는 지우고 올리세요."}}, {"@type": "Question", "name": "ChatGPT가 계산한 숫자를 믿어도 되나요?", "acceptedAnswer": {"@type": "Answer", "text": "파일을 코드로 계산한 숫자는 대체로 정확합니다. 다만 눈대중으로 답할 때는 틀리기도 합니다. 중요한 수치는 직접 검산하세요."}}, {"@type": "Question", "name": "분석 결과를 그래프로도 그려주나요?", "acceptedAnswer": {"@type": "Answer", "text": "네, 막대·선 그래프를 만들어 줍니다. 어떤 항목을 비교할 그래프인지 말해 주면 정확합니다. 그림이 어색하면 다시 그려달라고 하세요."}}]}</script>
 </head>
 <body>
 <div class="top"><div class="wrap">
@@ -75,6 +77,16 @@ a{color:var(--navy)}
 <li>'결론→근거 숫자→한계' 형식으로 판단에 바로 쓰게 만든다.</li>
 <li>'판단 불가 표기'로 AI가 없는 인사이트를 지어내는 걸 막는다.</li>
 </ul>
+
+<h2>자주 묻는 질문</h2>
+<div class="faq">
+<h3>엑셀·CSV 파일을 올려서 분석해도 되나요?</h3>
+<p>네, 파일을 올리면 표를 직접 읽고 계산합니다. 큰 파일이나 잦은 분석은 유료가 안정적입니다. 민감한 개인정보는 지우고 올리세요.</p>
+<h3>ChatGPT가 계산한 숫자를 믿어도 되나요?</h3>
+<p>파일을 코드로 계산한 숫자는 대체로 정확합니다. 다만 눈대중으로 답할 때는 틀리기도 합니다. 중요한 수치는 직접 검산하세요.</p>
+<h3>분석 결과를 그래프로도 그려주나요?</h3>
+<p>네, 막대·선 그래프를 만들어 줍니다. 어떤 항목을 비교할 그래프인지 말해 주면 정확합니다. 그림이 어색하면 다시 그려달라고 하세요.</p>
+</div>
 
 <!-- related:start -->
 <h2>관련 글</h2>
