@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>나만의 GPT 만드는 법 — 만들기 전에 '정말 필요한가'부터 | H.Sol</title>
+<meta name="description" content="나만의 GPT를 만들면 반복 업무를 도구로 굳힐 수 있습니다. 그런데 대부분은 프롬프트 하나면 충분합니다. 먼저 물어야 합니다. 이걸 매일 여러 번 쓰는가. 매번 설명이 길어지는가. 그럴 때만 GPT로 만들 값이 있습니다.">
+<meta property="og:title" content="나만의 GPT 만드는 법 — 만들기 전에 '정말 필요한가'부터">
+<meta property="og:description" content="나만의 GPT를 만들면 반복 업무를 도구로 굳힐 수 있습니다. 그런데 대부분은 프롬프트 하나면 충분합니다. 먼저 물어야 합니다. 이걸 매일 여러 번 쓰는가. 매번 설명이 길어지는가. 그럴 때만 GPT로 만들 값이 있습니다.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blindso.github.io/hsol-site/blog/chatgpt-custom-gpts.html">
+<meta property="og:image" content="https://blindso.github.io/hsol-site/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://blindso.github.io/hsol-site/blog/chatgpt-custom-gpts.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%231B2A4A%22/><text x=%2250%22 y=%2268%22 font-size=%2252%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22%23F5A623%22>H</text></svg>">
+<style>:root{--navy:#1B2A4A;--gold:#F5A623;--warm:#F4F1EC;--ink:#1A1A1A}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR",sans-serif;color:var(--ink);background:#fff;line-height:1.85;word-break:keep-all;overflow-wrap:anywhere}
+.top{background:var(--navy);color:#fff;padding:44px 0}
+.top .wrap p.k{color:var(--gold);font-size:13px;font-weight:700;margin-bottom:8px}
+.top h1{font-size:27px;font-weight:800;line-height:1.4}
+.wrap{max-width:680px;margin:0 auto;padding:0 24px}
+main{padding:36px 0 64px}
+h2{font-size:21px;color:var(--navy);font-weight:800;margin:40px 0 12px;padding-top:18px;border-top:3px solid var(--warm)}
+p{margin-bottom:12px;font-size:16px}
+ul{margin:0 0 14px 22px}li{margin-bottom:6px;font-size:15.5px}
+pre.prompt{background:var(--navy);color:#fff;border-radius:10px;padding:18px 20px;font-size:14.5px;line-height:1.7;overflow-x:auto;margin:14px 0;font-family:"SF Mono",Menlo,monospace;white-space:pre-wrap}
+.note{background:var(--warm);border-left:4px solid var(--gold);border-radius:0 10px 10px 0;padding:14px 18px;margin:18px 0}
+.cta{display:inline-block;background:var(--gold);color:var(--navy);font-weight:800;padding:13px 26px;border-radius:10px;text-decoration:none;margin-top:8px}
+a{color:var(--navy)}
+.back{display:inline-block;margin-top:32px;background:transparent;border:2px solid var(--navy);color:var(--navy);font-weight:800;padding:11px 24px;border-radius:10px;text-decoration:none}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "나만의 GPT 만드는 법 — 만들기 전에 '정말 필요한가'부터", "description": "나만의 GPT를 만들면 반복 업무를 도구로 굳힐 수 있습니다. 그런데 대부분은 프롬프트 하나면 충분합니다. 먼저 물어야 합니다. 이걸 매일 여러 번 쓰는가. 매번 설명이 길어지는가. 그럴 때만 GPT로 만들 값이 있습니다.", "author": {"@type": "Person", "name": "H.Sol"}, "publisher": {"@type": "Organization", "name": "H.Sol"}, "url": "https://blindso.github.io/hsol-site/blog/chatgpt-custom-gpts.html", "inLanguage": "ko"}</script>
+</head>
+<body>
+<div class="top"><div class="wrap">
+<p class="k">H.SOL · 실전 가이드</p>
+<h1>나만의 GPT 만드는 법 — 만들기 전에 '정말 필요한가'부터</h1>
+</div></div>
+<main><div class="wrap">
+
+<p>나만의 GPT를 만들면 반복 업무를 도구로 굳힐 수 있습니다. 그런데 대부분은 프롬프트 하나면 충분합니다. 먼저 물어야 합니다. 이걸 매일 여러 번 쓰는가. 매번 설명이 길어지는가. 그럴 때만 GPT로 만들 값이 있습니다.</p>
+
+<h2>왜 만들기 전에 멈춰야 하는가</h2>
+<p>GPT 만들기 자체는 어렵지 않습니다. 문제는 안 쓸 GPT를 만드는 데 시간을 쓰는 것입니다. 반복 빈도가 높을 때만 값이 있습니다. 판단 기준을 먼저 세워야 합니다. 아래 틀을 복사해 쓰세요.</p>
+
+<h2>바로 쓰는 프롬프트</h2>
+<pre class="prompt">당신은 업무 자동화 컨설턴트입니다.
+제 반복 업무는 [무엇]이고, 빈도는 [하루/주 몇 회]입니다.
+이걸 나만의 GPT로 만들 값이 있는지 판단해 주세요.
+형식: 만들 값 있음/없음 → 근거 2줄 → 있으면 GPT 지시문 초안.
+애매하면 '프롬프트로 충분'인지도 같이 말해 주세요.</pre>
+
+<h2>이 프롬프트의 핵심</h2>
+<ul>
+<li><strong>빈도부터 따진다</strong> — 매일 여러 번 쓰는 일만 GPT로 만들 값이 있습니다. 가끔 쓰는 건 프롬프트 하나가 낫습니다.</li>
+<li><strong>지시문을 명확히 쓴다</strong> — GPT의 성능은 지시문에서 옵니다. 역할·형식·금지사항을 프롬프트처럼 분명히 씁니다.</li>
+<li><strong>'프롬프트로 충분한지' 먼저 묻는다</strong> — 과하게 만들면 관리만 늘어납니다. 대부분은 좋은 프롬프트 하나로 끝납니다.</li>
+<li><strong>만들 값을 근거로 판단한다</strong> — 남들이 만드니까가 아니라, 내 빈도가 값을 정합니다.</li>
+</ul>
+
+<div class="note"><p><strong>왜 대부분은 프롬프트로 충분한가</strong> — GPT를 만들면 관리할 게 하나 늘어납니다. 하루 한두 번 쓰는 일이면 프롬프트를 저장해 두는 게 낫습니다. 도구는 정말 반복될 때만 값이 있습니다.</p></div>
+
+<h2>더 나아가려면 — 좋은 프롬프트의 4요소</h2>
+<p>GPT 지시문도 결국 좋은 프롬프트 뼈대에서 나옵니다. 좋은 프롬프트에는 뼈대가 있습니다 — 역할·맥락·지시·출력형식. 한 번 익히면 어디에나 응용됩니다. 원리 전체와 프롬프트 10개를 무료로 공개해 두었습니다.</p>
+<a class="cta" href="../free/prompt-4elements.html">좋은 프롬프트의 4요소 — GPT 지시문의 뼈대까지 무료로 읽기 →</a>
+
+<h2>정리</h2>
+<ul>
+<li>GPT는 반복 업무를 도구로 굳히는 것 — 단 대부분은 프롬프트 하나면 충분하다.</li>
+<li>매일 여러 번 쓰는 일만 GPT로 만들 값이 있다.</li>
+<li>GPT 성능은 지시문에서 온다 — 역할·형식·금지를 분명히 쓴다.</li>
+<li>'프롬프트로 충분한가'를 먼저 물어 과한 제작을 막는다.</li>
+</ul>
+
+<!-- related:start -->
+<h2>관련 글</h2>
+<ul>
+<li><a href="chatgpt-data-analysis.html">ChatGPT로 데이터 분석하는 법 — 숫자가 아니라 '질문'이 먼저다</a></li>
+<li><a href="chatgpt-excel-functions.html">ChatGPT로 엑셀 함수 만드는 법 — 이름을 몰라도 결과만 설명하면</a></li>
+<li><a href="chatgpt-how-to-use.html">ChatGPT 사용법 — 버튼이 아니라 '물어보는 법'이 진짜다</a></li>
+</ul>
+<!-- related:end -->
+<a class="back" href="../index.html">← H.Sol 홈으로</a>
+</div></main>
+<script src="../analytics.js" defer></script>
+</body>
+</html>
