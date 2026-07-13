@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>엑셀·데이터 프롬프트 5종 — H.Sol 무료 배포판</title>
+<style>
+:root{--navy:#1B2A4A;--gold:#F5A623;--warm:#F4F1EC;--ink:#1A1A1A}
+*{margin:0;padding:0;box-sizing:border-box}
+@page{size:A4;margin:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;color:var(--ink);line-height:1.8}
+.cover{height:100vh;background:var(--navy);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:60px;page-break-after:always}
+.cover .badge{color:var(--gold);font-weight:700;font-size:14px;margin-bottom:18px;letter-spacing:1px}
+.cover h1{font-size:36px;font-weight:800;line-height:1.4;margin-bottom:16px}
+.cover h1 em{color:var(--gold);font-style:normal}
+.cover p.sub{font-size:16px;opacity:.85;margin-bottom:40px}
+.cover .share{border:1px solid var(--gold);color:var(--gold);display:inline-block;padding:8px 18px;border-radius:20px;font-size:13px;font-weight:700;align-self:flex-start}
+.body{padding:48px 56px}
+h2{font-size:20px;color:var(--navy);font-weight:800;margin:34px 0 12px;padding-top:16px;border-top:3px solid var(--warm);page-break-after:avoid}
+h3{font-size:16px;color:var(--navy);margin:20px 0 6px;page-break-after:avoid}
+p{margin-bottom:10px;font-size:14.5px}
+ul{margin:0 0 12px 20px} li{margin-bottom:5px;font-size:14px}
+pre.prompt{background:var(--navy);color:#fff;border-radius:10px;padding:14px 18px;font-size:13px;line-height:1.65;margin:12px 0;font-family:Menlo,monospace;white-space:pre-wrap;page-break-inside:avoid}
+.note{background:var(--warm);border-left:4px solid var(--gold);border-radius:0 10px 10px 0;padding:12px 16px;margin:14px 0;page-break-inside:avoid}
+.note p{font-size:13.5px;margin-bottom:4px}
+hr{border:none;border-top:2px dashed #ddd;margin:28px 0}
+.soon{color:var(--gold);font-weight:700}
+.backcover{page-break-before:always;height:96vh;background:var(--navy);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:60px}
+.backcover h2{color:var(--gold);border:none;font-size:24px;margin-bottom:16px}
+.backcover p{font-size:15px;opacity:.9;margin-bottom:10px}
+</style>
+</head>
+<body>
+<div class="cover">
+  <div class="badge">H.SOL 실전 시리즈 · 무료 배포판 3호</div>
+  <h1>엑셀·데이터<br><em>프롬프트 5종</em></h1>
+  <p class="sub">함수를 외우지 마세요 — 결과만 설명하면 AI가 찾아줍니다</p>
+  <div class="share">무료 배포판 — 자유롭게 공유하세요</div>
+</div>
+<div class="body">
+<h2>함수는 외울 필요가 없다</h2>
+<p>엑셀 함수는 외울 필요가 없습니다. <strong>원하는 결과만 말로 설명하면</strong> AI가 맞는 함수를 찾아 줍니다. 아래 5개를 복사해 [대괄호]만 바꿔 쓰세요.</p>
+
+<h2>① 함수 만들기 (이름을 몰라도 됨)</h2>
+<p>함수 이름을 모를 때는 결과를 설명하세요. AI는 당신의 표를 볼 수 없으니 <strong>열 구성</strong>을 반드시 알려줘야 합니다.</p>
+<pre class="prompt">당신은 엑셀 실무 전문가입니다.
+[원하는 결과]를 만들고 싶습니다. 데이터는 [열 구성]입니다.
+함수 1개와 동작 설명 2줄로 알려주세요.</pre>
+<div class="note"><p><strong>핵심</strong> — 데이터 구조를 알려주면 엉뚱한 함수를 받는 일이 줄어듭니다. "A열 날짜, B열 부서, C열 금액"처럼요.</p></div>
+
+<h2>② 에러 원인 찾기</h2>
+<p>에러 메시지를 통째로 붙여넣으세요. 수정안만 받지 말고 <strong>원인</strong>도 받아야 다음엔 혼자 고칩니다.</p>
+<pre class="prompt">당신은 엑셀 실무 전문가입니다.
+아래 수식에서 [에러]가 나는 상황입니다.
+원인 1줄 + 수정한 수식 + 왜 고쳐졌는지 1줄, 이 형식으로 알려주세요.
+수식: [붙여넣기]</pre>
+
+<h2>③ 표 정리 (기준을 먼저)</h2>
+<p>정리에는 기준이 필요합니다. 중복을 뺄지, 빈 값을 채울지 정하세요. 기준을 주면 매번 같은 방식으로 처리됩니다.</p>
+<pre class="prompt">당신은 데이터 정리 담당자입니다.
+아래 표에서 [중복 제거 / 결측 처리 / 정렬]을 해주세요.
+기준: [설명]
+결과는 정리된 표 + 무엇을 몇 건 처리했는지 요약 1줄로 주세요.
+표: [붙여넣기]</pre>
+
+<h2>④ 요약 통계 + 이상치</h2>
+<p>숫자는 그대로 보면 안 보입니다. 평균·합계·비율로 요약해야 보입니다. <strong>눈에 띄는 점</strong>도 함께 물어보세요.</p>
+<pre class="prompt">당신은 데이터 분석가입니다.
+[분석 목적] 상황에서 아래 데이터를 봅니다.
+[평균/합계/비율] 요약을 표로 정리하고, 눈에 띄는 점 3가지를 불릿으로 알려주세요.
+데이터: [붙여넣기]</pre>
+<div class="note"><p><strong>핵심</strong> — "눈에 띄는 점 3가지"가 이 프롬프트의 진짜 값입니다. 요약만 받으면 여전히 해석은 내 몫이니까요.</p></div>
+
+<h2>⑤ 해석·시사점 (질문이 먼저)</h2>
+<p>요약 다음은 해석입니다. 그런데 <strong>무엇을 알고 싶은지가 먼저</strong>입니다. 질문이 없으면 시사점도 없습니다.</p>
+<pre class="prompt">당신은 데이터 분석가입니다.
+[의사결정 상황]에서 [알고 싶은 질문]에 답해 주세요.
+형식: 결론 1줄 → 근거 숫자 3개 → 한계 1줄.
+데이터로 답할 수 없는 부분은 '판단 불가'로 표기해 주세요.
+데이터: [붙여넣기]</pre>
+<div class="note"><p><strong>핵심</strong> — "판단 불가로 표기" 한 줄이 지어낸 결론을 막습니다. AI는 시키지 않으면 빈칸을 그럴듯하게 채웁니다.</p></div>
+
+<hr>
+<h2>다음 단계 — 나머지가 궁금하다면</h2>
+<p>이 5종은 본편 4장(데이터·엑셀)의 일부입니다. 본편에는 8개 업무 카테고리, 프롬프트 100개가 "상황 → 프롬프트 → 응용" 구조로 담겨 있습니다.</p>
+<p>📘 <strong>본편 보기: <span class="soon">출시 준비 중 — blindso.github.io/hsol-site 에 링크가 먼저 붙습니다</span></strong></p>
+<hr>
+<p><em>H.Sol — 실무에서 직접 쓰고 검증한 것만 씁니다. 이 무료판은 자유롭게 공유하셔도 됩니다.</em></p>
+</div>
+<div class="backcover">
+  <h2>H.Sol — 실무에서 직접 쓰고 검증한 것만.</h2>
+  <p>숫자로 말합니다. 못 하는 건 못 한다고 말합니다. 아는 것은 돌려줍니다.</p>
+  <p>새 무료 자료와 본편 소식: <strong>blindso.github.io/hsol-site</strong></p>
+  <p style="margin-top:24px;font-size:13px;opacity:.6">이 문서는 자유롭게 공유하셔도 됩니다. 내용의 수정·재판매만 하지 말아 주세요.</p>
+</div>
+</body>
+</html>

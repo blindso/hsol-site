@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>업무 이메일 프롬프트 5종 — H.Sol 무료 배포판</title>
+<style>
+:root{--navy:#1B2A4A;--gold:#F5A623;--warm:#F4F1EC;--ink:#1A1A1A}
+*{margin:0;padding:0;box-sizing:border-box}
+@page{size:A4;margin:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;color:var(--ink);line-height:1.8}
+.cover{height:100vh;background:var(--navy);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:60px;page-break-after:always}
+.cover .badge{color:var(--gold);font-weight:700;font-size:14px;margin-bottom:18px;letter-spacing:1px}
+.cover h1{font-size:36px;font-weight:800;line-height:1.4;margin-bottom:16px}
+.cover h1 em{color:var(--gold);font-style:normal}
+.cover p.sub{font-size:16px;opacity:.85;margin-bottom:40px}
+.cover .share{border:1px solid var(--gold);color:var(--gold);display:inline-block;padding:8px 18px;border-radius:20px;font-size:13px;font-weight:700;align-self:flex-start}
+.body{padding:48px 56px}
+h2{font-size:20px;color:var(--navy);font-weight:800;margin:34px 0 12px;padding-top:16px;border-top:3px solid var(--warm);page-break-after:avoid}
+h3{font-size:16px;color:var(--navy);margin:20px 0 6px;page-break-after:avoid}
+p{margin-bottom:10px;font-size:14.5px}
+ul{margin:0 0 12px 20px} li{margin-bottom:5px;font-size:14px}
+pre.prompt{background:var(--navy);color:#fff;border-radius:10px;padding:14px 18px;font-size:13px;line-height:1.65;margin:12px 0;font-family:Menlo,monospace;white-space:pre-wrap;page-break-inside:avoid}
+.note{background:var(--warm);border-left:4px solid var(--gold);border-radius:0 10px 10px 0;padding:12px 16px;margin:14px 0;page-break-inside:avoid}
+.note p{font-size:13.5px;margin-bottom:4px}
+hr{border:none;border-top:2px dashed #ddd;margin:28px 0}
+.soon{color:var(--gold);font-weight:700}
+.backcover{page-break-before:always;height:96vh;background:var(--navy);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:60px}
+.backcover h2{color:var(--gold);border:none;font-size:24px;margin-bottom:16px}
+.backcover p{font-size:15px;opacity:.9;margin-bottom:10px}
+</style>
+</head>
+<body>
+<div class="cover">
+  <div class="badge">H.SOL 실전 시리즈 · 무료 배포판 2호</div>
+  <h1>업무 이메일<br><em>프롬프트 5종</em></h1>
+  <p class="sub">수위 조절은 AI에게 — 복붙해서 대괄호만 바꾸면 되는 5개</p>
+  <div class="share">무료 배포판 — 자유롭게 공유하세요</div>
+</div>
+<div class="body">
+<h2>이메일은 내용보다 수위가 어렵다</h2>
+<p>이메일이 어려운 건 내용보다 <strong>수위</strong> 때문입니다. 너무 세도, 너무 약해도 곤란합니다. 상황만 알려주면 AI가 그 수위를 맞춰 줍니다. 아래 5개를 복사해 [대괄호]만 바꿔 쓰세요.</p>
+
+<h2>① 상황별 이메일 (요청·거절·사과·독촉)</h2>
+<p>메일의 톤은 상대와 목적이 정합니다. 그래서 이 둘을 먼저 알려줘야 합니다.</p>
+<pre class="prompt">당신은 [직무]입니다. [상대]에게 [목적: 요청/거절/사과/독촉] 메일을
+정중하되 명확하게, 5문장 이내로 써주세요. 상황: [설명]</pre>
+<div class="note"><p><strong>핵심</strong> — 관계와 목표만 주면 수위는 AI가 맞춥니다. "5문장 이내" 한마디로 군더더기도 빠집니다.</p></div>
+
+<h2>② 관계를 지키는 거절</h2>
+<p>거절 메일은 골격이 정해져 있습니다. 한 번 잘 만들어 두면 계속 씁니다.</p>
+<pre class="prompt">당신은 [직무]입니다. [상대와의 관계] 상황에서
+[요청 내용]을 정중히 거절하는 메일을 써주세요.
+관계를 해치지 않게, 대안 1개를 포함해 5문장 이내로.</pre>
+<div class="note"><p><strong>핵심</strong> — "대안 1개 포함"이 관계를 지키는 장치입니다. 거절만 하는 메일과 완전히 다르게 읽힙니다.</p></div>
+
+<h2>③ 톤 3종 변환 (정중·단호·친근)</h2>
+<p>같은 내용도 톤에 따라 인상이 달라집니다. 하나만 쓰지 말고 세 가지를 받아 고르세요.</p>
+<pre class="prompt">당신은 비즈니스 커뮤니케이션 전문가입니다.
+[상대·목적] 상황을 고려해, 아래 메일을 정중/단호/친근
+3가지 톤으로 각각 바꿔 주세요. 각 버전은 5문장 이내로.
+메일: [붙여넣기]</pre>
+<div class="note"><p><strong>핵심</strong> — 내용은 그대로, 톤만 바꿔 인상을 설계합니다. 보내기 전 30초면 됩니다.</p></div>
+
+<h2>④ 맞춤법·어색함 교정</h2>
+<p>맞춤법과 어색한 표현은 신뢰를 깎습니다. 무엇을 왜 고쳤는지까지 물어보세요 — 다음엔 스스로 고칠 수 있게 됩니다.</p>
+<pre class="prompt">당신은 국어 교정 전문가입니다.
+[문서 용도] 글의 맞춤법과 어색한 표현을 고쳐 주세요.
+형식: 교정본 → 고친 항목 3개(무엇을 왜 고쳤는지 각 1줄).
+글: [붙여넣기]</pre>
+
+<h2>⑤ 급한 메일 다듬기</h2>
+<p>급하게 쓴 메일일수록 보내기 전에 한 번 다듬으세요. 조건 3개면 충분합니다.</p>
+<pre class="prompt">당신은 비즈니스 커뮤니케이션 전문가입니다.
+아래 이메일을 정중하지만 간결한 비즈니스 톤으로 고쳐 주세요.
+조건: 1) 3문단 이내 2) 요청사항을 첫 문단에 3) 마감일을 굵게.
+[이메일 본문 붙여넣기]</pre>
+<div class="note"><p><strong>핵심</strong> — 조건 3개만 바꾸면 보고서·공지문에도 같은 틀이 통합니다.</p></div>
+
+<hr>
+<h2>다음 단계 — 나머지가 궁금하다면</h2>
+<p>이 5종은 본편 3장(이메일·커뮤니케이션)의 일부입니다. 본편에는 8개 업무 카테고리, 프롬프트 100개가 "상황 → 프롬프트 → 응용" 구조로 담겨 있습니다.</p>
+<p>📘 <strong>본편 보기: <span class="soon">출시 준비 중 — blindso.github.io/hsol-site 에 링크가 먼저 붙습니다</span></strong></p>
+<hr>
+<p><em>H.Sol — 실무에서 직접 쓰고 검증한 것만 씁니다. 이 무료판은 자유롭게 공유하셔도 됩니다.</em></p>
+</div>
+<div class="backcover">
+  <h2>H.Sol — 실무에서 직접 쓰고 검증한 것만.</h2>
+  <p>숫자로 말합니다. 못 하는 건 못 한다고 말합니다. 아는 것은 돌려줍니다.</p>
+  <p>새 무료 자료와 본편 소식: <strong>blindso.github.io/hsol-site</strong></p>
+  <p style="margin-top:24px;font-size:13px;opacity:.6">이 문서는 자유롭게 공유하셔도 됩니다. 내용의 수정·재판매만 하지 말아 주세요.</p>
+</div>
+</body>
+</html>
