@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+<title>H.Sol 실전 가이드 — ChatGPT 업무 활용</title>
+<link>https://blindso.github.io/hsol-site/blog/</link>
+<description>ChatGPT를 업무에 실제로 쓰는 법. 복붙 프롬프트와 왜 되는지까지.</description>
+<language>ko</language>
+<item>
+<title>ChatGPT로 아이디어 내는 법 — &#x27;아이디어 줘&#x27;가 뻔한 답을 부르는 이유</title>
+<link>https://blindso.github.io/hsol-site/blog/chatgpt-brainstorming-ideas.html</link>
+<guid>https://blindso.github.io/hsol-site/blog/chatgpt-brainstorming-ideas.html</guid>
+<description>ChatGPT에 &#x27;아이디어 줘&#x27;라고 하면 누구나 떠올릴 뻔한 목록이 나옵니다. 제약이 없으면 평범한 답이 나오기 때문입니다. 좋은 아이디어는 조건을 좁힐 때 나옵니다. 제약이 곧 창의의 재료입니다.</description>
+</item>
+<item>
+<title>ChatGPT로 업무 이메일 쓰는 법 — 거절·사과·독촉을 수위 맞춰서</title>
+<link>https://blindso.github.io/hsol-site/blog/chatgpt-business-email.html</link>
+<guid>https://blindso.github.io/hsol-site/blog/chatgpt-business-email.html</guid>
+<description>업무 이메일이 어려운 건 내용이 아니라 수위입니다. 너무 세도 너무 약해도 곤란합니다. ChatGPT에 상황만 알려주면 그 수위를 맞춰 줍니다.</description>
+</item>
+<item>
+<title>ChatGPT로 엑셀 함수 만드는 법 — 이름을 몰라도 결과만 설명하면</title>
+<link>https://blindso.github.io/hsol-site/blog/chatgpt-excel-functions.html</link>
+<guid>https://blindso.github.io/hsol-site/blog/chatgpt-excel-functions.html</guid>
+<description>엑셀 함수는 외울 필요가 없습니다. 원하는 결과만 말로 설명하면 ChatGPT가 맞는 함수를 찾아 줍니다. 단, 열 구성을 꼭 알려줘야 합니다.</description>
+</item>
+<item>
+<title>ChatGPT로 마케팅 문구 쓰는 법 — 뻔한 카피가 나오는 진짜 이유</title>
+<link>https://blindso.github.io/hsol-site/blog/chatgpt-marketing-copy.html</link>
+<guid>https://blindso.github.io/hsol-site/blog/chatgpt-marketing-copy.html</guid>
+<description>ChatGPT에 &#x27;광고 문구 써줘&#x27;라고 하면 어디서 본 듯한 뻔한 카피가 나옵니다. AI가 부족해서가 아닙니다. 누구에게, 무엇을, 왜 파는지를 안 줬기 때문입니다. 카피는 대상과 약속이 정해지면 절반은 끝납니다.</description>
+</item>
+<item>
+<title>ChatGPT로 회의록 정리하는 법 — 녹취를 5분 만에 표 3개로</title>
+<link>https://blindso.github.io/hsol-site/blog/chatgpt-meeting-minutes.html</link>
+<guid>https://blindso.github.io/hsol-site/blog/chatgpt-meeting-minutes.html</guid>
+<description>회의 녹취·메모를 ChatGPT로 정리하는 실전 방법. 결정사항·실행항목·보류 안건 3개 표로 나누는 프롬프트와, AI가 빈칸을 지어내지 않게 하는 한 줄까지.</description>
+</item>
+<item>
+<title>ChatGPT 프롬프트 잘 쓰는 법 — 답의 급을 바꾸는 4가지</title>
+<link>https://blindso.github.io/hsol-site/blog/chatgpt-prompt-writing.html</link>
+<guid>https://blindso.github.io/hsol-site/blog/chatgpt-prompt-writing.html</guid>
+<description>같은 ChatGPT인데 누구는 쓸 만한 답을 받고 누구는 뻔한 답을 받습니다. 차이는 모델이 아니라 프롬프트입니다. 좋은 프롬프트에는 뼈대가 있습니다. 그 뼈대만 익히면 어떤 업무에도 통합니다.</description>
+</item>
+<item>
+<title>ChatGPT로 보고서 초안 쓰는 법 — 데이터를 판단 재료로</title>
+<link>https://blindso.github.io/hsol-site/blog/chatgpt-report-writing.html</link>
+<guid>https://blindso.github.io/hsol-site/blog/chatgpt-report-writing.html</guid>
+<description>데이터는 있는데 보고서로 옮길 시간이 없을 때, ChatGPT를 쓰는 실전 방법입니다. 핵심은 문서를 쓰는 게 아니라 판단 재료를 정리하게 시키는 것입니다.</description>
+</item>
+<item>
+<title>ChatGPT로 공부하는 법 — 요약만 받지 말고 나를 시험하게 하라</title>
+<link>https://blindso.github.io/hsol-site/blog/chatgpt-study-learning.html</link>
+<guid>https://blindso.github.io/hsol-site/blog/chatgpt-study-learning.html</guid>
+<description>ChatGPT로 공부할 때 대부분 &#x27;요약해줘&#x27;에서 멈춥니다. 그런데 요약을 읽는 것과 아는 것은 다릅니다. 진짜 학습은 내가 설명하고, AI가 빈틈을 짚어 줄 때 일어납니다. 시키는 방식만 바꾸면 됩니다.</description>
+</item>
+<item>
+<title>ChatGPT로 반복 업무 자동화하는 법 — 매번 새로 시키지 않는 3단계</title>
+<link>https://blindso.github.io/hsol-site/blog/chatgpt-work-automation.html</link>
+<guid>https://blindso.github.io/hsol-site/blog/chatgpt-work-automation.html</guid>
+<description>매일 같은 일을 ChatGPT에 시키면서 매번 처음부터 설명하고 있다면, 그건 자동화가 아닙니다. 반복 업무는 한 번만 잘 설계해 두면 다음부터는 붙여넣기만 하면 됩니다. 핵심은 &#x27;나만의 업무 틀&#x27;을 만드는 것입니다.</description>
+</item>
+</channel>
+</rss>
