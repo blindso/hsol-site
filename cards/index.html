@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="UTF-8">
+<html lang="ko"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>주간 카드 — H.Sol</title>
-<meta name="description" content="매주 갱신되는 실전 카드 — 프롬프트·실측 데이터·체크리스트. 자유롭게 저장·공유하세요.">
-<meta property="og:title" content="주간 카드 — H.Sol">
-<meta property="og:description" content="매주 갱신되는 실전 카드. 자유롭게 저장·공유하세요.">
+<title>주간 카드 — 프롬프트·체크리스트·실측 | H.Sol</title>
+<meta name="description" content="매주 만드는 프롬프트·체크리스트·실측 데이터 카드. 저장·공유 자유입니다.">
+<meta property="og:title" content="주간 카드 — 프롬프트·체크리스트·실측 | H.Sol">
+<meta property="og:description" content="매주 만드는 프롬프트·체크리스트·실측 데이터 카드. 저장·공유 자유입니다.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://blindso.github.io/hsol-site/cards/">
 <meta property="og:image" content="https://blindso.github.io/hsol-site/og-default.png">
@@ -18,51 +16,87 @@
 <style>
 :root{--navy:#1B2A4A;--gold:#F5A623;--warm:#F4F1EC;--ink:#1A1A1A}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR",sans-serif;color:var(--ink);background:var(--warm);line-height:1.7;word-break:keep-all;overflow-wrap:anywhere}
-.top{background:var(--navy);color:#fff;padding:40px 0}
-.top .wrap p.k{color:var(--gold);font-size:13px;font-weight:700;margin-bottom:8px}
-.top h1{font-size:26px;font-weight:800}
-.top p.sub{font-size:15px;opacity:.85;margin-top:8px}
-.wrap{max-width:720px;margin:0 auto;padding:0 24px}
-main{padding:40px 0 64px}
-h2{font-size:19px;color:var(--navy);font-weight:800;margin:28px 0 14px}
-h2::before{content:"";display:inline-block;width:18px;height:4px;background:var(--gold);border-radius:2px;margin-right:8px;vertical-align:middle}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
-.grid a{display:block;border-radius:12px;overflow:hidden;box-shadow:0 1px 5px rgba(27,42,74,.12);background:#fff}
-.grid img{width:100%;display:block}
-.note{font-size:13.5px;color:#777;margin-top:20px}
-.back{display:inline-block;margin-top:32px;background:var(--gold);color:var(--navy);font-weight:800;padding:12px 24px;border-radius:10px;text-decoration:none}
+body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR",sans-serif;color:var(--ink);background:var(--warm);line-height:1.8;word-break:keep-all;overflow-wrap:anywhere}
+.top{background:var(--navy);color:#fff;padding:52px 0}
+.top .k{color:var(--gold);font-size:13px;font-weight:700;margin-bottom:10px}
+.top h1{font-size:28px;font-weight:800}
+.top p{font-size:15.5px;opacity:.85;margin-top:10px}
+.wrap{max-width:900px;margin:0 auto;padding:0 24px}
+main{padding:36px 0 64px}
+.wk{margin-bottom:32px}
+.wk h2{font-size:18px;color:var(--navy);font-weight:800;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+figure{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 1px 4px rgba(27,42,74,.08)}
+figure img{width:100%;height:auto;display:block}
+figcaption{padding:9px 12px;font-size:13px;color:#555;font-weight:600}
+.cta{display:inline-block;background:var(--gold);color:var(--navy);font-weight:800;padding:13px 26px;border-radius:10px;text-decoration:none;margin-top:8px}
+.back{display:inline-block;margin-top:20px;margin-left:10px;background:transparent;border:2px solid var(--navy);color:var(--navy);font-weight:800;padding:11px 22px;border-radius:10px;text-decoration:none}
+a{color:var(--navy)}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "주간 카드", "description": "매주 갱신되는 실전 카드 — 프롬프트·실측 데이터·체크리스트. 자유롭게 저장·공유하세요.", "author": {"@type": "Person", "name": "H.Sol"}, "publisher": {"@type": "Organization", "name": "H.Sol"}, "url": "https://blindso.github.io/hsol-site/cards/index.html", "inLanguage": "ko"}</script>
 </head>
 <body>
 <div class="top"><div class="wrap">
-<p class="k">H.SOL · 무료 카드</p>
-<h1>주간 카드</h1>
-<p class="sub">매주 새 카드가 올라옵니다 — 프롬프트·실측 데이터·체크리스트. 저장·공유 자유.</p>
+<p class="k">H.SOL · 주간 카드</p>
+<h1>주간 카드 — 프롬프트·체크리스트·실측</h1>
+<p>매주 새로 올라옵니다. 저장·공유 자유입니다. (현재 9장)</p>
 </div></div>
 <main><div class="wrap">
 
-<h2>2026 · 7월 4주</h2>
-<div class="grid">
-  <a href="2026-W30_list_automation-3rules.png" target="_blank"><img src="2026-W30_list_automation-3rules.png" alt="자동화되는 일의 조건 3가지 카드" loading="lazy"></a>
-  <a href="2026-W30_prompt_report-draft.png" target="_blank"><img src="2026-W30_prompt_report-draft.png" alt="보고서 초안 프롬프트 카드" loading="lazy"></a>
-  <a href="2026-W30_score_free-assets.png" target="_blank"><img src="2026-W30_score_free-assets.png" alt="무료 자료 배포 실측 카드" loading="lazy"></a>
-</div>
+  <section class="wk">
+    <h2>2026-W30</h2>
+    <div class="grid">
+      <figure>
+        <img src="2026-W30_score_free-assets.png" alt="실측 데이터 카드 — free assets" loading="lazy">
+        <figcaption>실측 데이터</figcaption>
+      </figure>
+      <figure>
+        <img src="2026-W30_prompt_report-draft.png" alt="프롬프트 카드 — report draft" loading="lazy">
+        <figcaption>프롬프트</figcaption>
+      </figure>
+      <figure>
+        <img src="2026-W30_list_automation-3rules.png" alt="체크리스트 카드 — automation 3rules" loading="lazy">
+        <figcaption>체크리스트</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="wk">
+    <h2>2026-W29</h2>
+    <div class="grid">
+      <figure>
+        <img src="2026-W29_score_kmong-research.png" alt="실측 데이터 카드 — kmong research" loading="lazy">
+        <figcaption>실측 데이터</figcaption>
+      </figure>
+      <figure>
+        <img src="2026-W29_prompt_meeting-minutes.png" alt="프롬프트 카드 — meeting minutes" loading="lazy">
+        <figcaption>프롬프트</figcaption>
+      </figure>
+      <figure>
+        <img src="2026-W29_list_prompt-4elements.png" alt="체크리스트 카드 — prompt 4elements" loading="lazy">
+        <figcaption>체크리스트</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="wk">
+    <h2>2026-W28</h2>
+    <div class="grid">
+      <figure>
+        <img src="2026-W28_score_persuasion-score.png" alt="실측 데이터 카드 — persuasion score" loading="lazy">
+        <figcaption>실측 데이터</figcaption>
+      </figure>
+      <figure>
+        <img src="2026-W28_prompt_daily-prompt-email.png" alt="프롬프트 카드 — daily prompt email" loading="lazy">
+        <figcaption>프롬프트</figcaption>
+      </figure>
+      <figure>
+        <img src="2026-W28_list_weekly-ai-top5.png" alt="체크리스트 카드 — weekly ai top5" loading="lazy">
+        <figcaption>체크리스트</figcaption>
+      </figure>
+    </div>
+  </section>
 
-<h2>2026 · 7월 3주</h2>
-<div class="grid">
-  <a href="2026-W29_list_prompt-4elements.png" target="_blank"><img src="2026-W29_list_prompt-4elements.png" alt="좋은 프롬프트의 4요소 카드" loading="lazy"></a>
-  <a href="2026-W29_prompt_meeting-minutes.png" target="_blank"><img src="2026-W29_prompt_meeting-minutes.png" alt="회의록 정리 프롬프트 카드" loading="lazy"></a>
-  <a href="2026-W29_score_kmong-research.png" target="_blank"><img src="2026-W29_score_kmong-research.png" alt="크몽 경쟁 분석 실측 카드" loading="lazy"></a>
-</div>
-
-<p class="note">카드를 눌러 원본(1080×1350)을 저장하세요. 수정 없이 공유하시면 됩니다.</p>
-
-<p style="margin-top:24px"><a class="cta" style="display:inline-block;background:var(--gold);color:var(--navy);font-weight:800;padding:13px 26px;border-radius:10px;text-decoration:none" href="../free/prompt-4elements.html">무료 자료 받기: 좋은 프롬프트의 4요소 →</a></p>
-<p style="margin-top:20px">업무별 실전 가이드 전체 → <a href="../guide.html"><strong>ChatGPT 업무 활용 완전 가이드</strong></a></p>
+<p style="margin-top:24px">업무별 실전 가이드 전체 → <a href="../guide.html"><strong>ChatGPT 업무 활용 완전 가이드</strong></a></p>
+<a class="cta" href="../free/prompt-4elements.html">무료 자료 받으러 가기 →</a>
 <a class="back" href="../index.html">← H.Sol 홈으로</a>
 </div></main>
 <script src="../analytics.js" defer></script>
-</body>
-</html>
+</body></html>
