@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChatGPT로 자료 조사하는 법 — 지어낸 출처에 속지 않으려면 | H.Sol</title>
+<meta name="description" content="ChatGPT는 모르는 것도 아는 것처럼 답합니다. 없는 논문과 없는 통계를 그럴듯한 형식으로 내놓습니다. 그래서 조사는 답을 받는 일이 아니라 확인하는 일입니다. 확인을 프롬프트에 넣으면 속을 일이 크게 줄어듭니다.">
+<meta property="og:title" content="ChatGPT로 자료 조사하는 법 — 지어낸 출처에 속지 않으려면">
+<meta property="og:description" content="ChatGPT는 모르는 것도 아는 것처럼 답합니다. 없는 논문과 없는 통계를 그럴듯한 형식으로 내놓습니다. 그래서 조사는 답을 받는 일이 아니라 확인하는 일입니다. 확인을 프롬프트에 넣으면 속을 일이 크게 줄어듭니다.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blindso.github.io/hsol-site/blog/chatgpt-research.html">
+<meta property="og:image" content="https://blindso.github.io/hsol-site/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://blindso.github.io/hsol-site/blog/chatgpt-research.html">
+<link rel="alternate" type="application/rss+xml" title="H.Sol 실전 가이드" href="https://blindso.github.io/hsol-site/feed.xml">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%231B2A4A%22/><text x=%2250%22 y=%2268%22 font-size=%2252%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22%23F5A623%22>H</text></svg>">
+<style>:root{--navy:#1B2A4A;--gold:#F5A623;--warm:#F4F1EC;--ink:#1A1A1A}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR",sans-serif;color:var(--ink);background:#fff;line-height:1.85;word-break:keep-all;overflow-wrap:anywhere}
+.top{background:var(--navy);color:#fff;padding:44px 0}
+.top .wrap p.k{color:var(--gold);font-size:13px;font-weight:700;margin-bottom:8px}
+.top h1{font-size:27px;font-weight:800;line-height:1.4}
+.wrap{max-width:680px;margin:0 auto;padding:0 24px}
+main{padding:36px 0 64px}
+h2{font-size:21px;color:var(--navy);font-weight:800;margin:40px 0 12px;padding-top:18px;border-top:3px solid var(--warm)}
+p{margin-bottom:12px;font-size:16px}
+ul{margin:0 0 14px 22px}li{margin-bottom:6px;font-size:15.5px}
+pre.prompt{background:var(--navy);color:#fff;border-radius:10px;padding:18px 20px;font-size:14.5px;line-height:1.7;overflow-x:auto;margin:14px 0;font-family:"SF Mono",Menlo,monospace;white-space:pre-wrap}
+.note{background:var(--warm);border-left:4px solid var(--gold);border-radius:0 10px 10px 0;padding:14px 18px;margin:18px 0}
+.cta{display:inline-block;background:var(--gold);color:var(--navy);font-weight:800;padding:13px 26px;border-radius:10px;text-decoration:none;margin-top:8px}
+.faq h3{font-size:16.5px;color:var(--navy);font-weight:700;margin:18px 0 6px}
+a{color:var(--navy)}
+.back{display:inline-block;margin-top:32px;background:transparent;border:2px solid var(--navy);color:var(--navy);font-weight:800;padding:11px 24px;border-radius:10px;text-decoration:none}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ChatGPT로 자료 조사하는 법 — 지어낸 출처에 속지 않으려면", "description": "ChatGPT는 모르는 것도 아는 것처럼 답합니다. 없는 논문과 없는 통계를 그럴듯한 형식으로 내놓습니다. 그래서 조사는 답을 받는 일이 아니라 확인하는 일입니다. 확인을 프롬프트에 넣으면 속을 일이 크게 줄어듭니다.", "author": {"@type": "Person", "name": "H.Sol", "url": "https://blindso.github.io/hsol-site/about.html"}, "publisher": {"@type": "Organization", "name": "H.Sol", "logo": {"@type": "ImageObject", "url": "https://blindso.github.io/hsol-site/logo.png"}}, "datePublished": "2026-07-14", "dateModified": "2026-07-14", "url": "https://blindso.github.io/hsol-site/blog/chatgpt-research.html", "inLanguage": "ko"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "H.Sol", "item": "https://blindso.github.io/hsol-site/"}, {"@type": "ListItem", "position": 2, "name": "ChatGPT 업무 활용 완전 가이드", "item": "https://blindso.github.io/hsol-site/guide.html"}, {"@type": "ListItem", "position": 3, "name": "ChatGPT로 자료 조사하는 법 — 지어낸 출처에 속지 않으려면", "item": "https://blindso.github.io/hsol-site/blog/chatgpt-research.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "검색 기능이 있는 ChatGPT는 출처를 지어내지 않나요?", "acceptedAnswer": {"@type": "Answer", "text": "검색으로 찾은 링크는 실제로 존재합니다. 다만 그 링크가 주장을 실제로 뒷받침하는지는 다른 문제입니다. 링크를 열어 해당 대목을 직접 확인하세요."}}, {"@type": "Question", "name": "지어낸 출처인지 어떻게 알아채나요?", "acceptedAnswer": {"@type": "Answer", "text": "링크를 직접 열어 보면 바로 드러납니다. 열리지 않거나 내용이 다르면 그 근거는 버리세요. 저자와 연도만으로는 판별되지 않습니다."}}, {"@type": "Question", "name": "보고서에 ChatGPT 조사 결과를 써도 되나요?", "acceptedAnswer": {"@type": "Answer", "text": "원문을 확인한 내용만 쓰세요. 확인하지 못한 숫자와 인용은 빼는 편이 안전합니다. 틀린 근거 하나가 보고서 전체의 신뢰를 무너뜨립니다."}}]}</script>
+</head>
+<body>
+<div class="top"><div class="wrap">
+<p class="k">H.SOL · 실전 가이드</p>
+<h1>ChatGPT로 자료 조사하는 법 — 지어낸 출처에 속지 않으려면</h1>
+</div></div>
+<main><div class="wrap">
+
+<p>ChatGPT는 모르는 것도 아는 것처럼 답합니다. 없는 논문과 없는 통계를 그럴듯한 형식으로 내놓습니다. 그래서 조사는 답을 받는 일이 아니라 확인하는 일입니다. 확인을 프롬프트에 넣으면 속을 일이 크게 줄어듭니다.</p>
+
+<h2>왜 ChatGPT 출처를 그대로 믿으면 안 되나</h2>
+<p>ChatGPT는 빈칸을 그럴듯하게 채우도록 만들어졌습니다. 그래서 없는 저자와 없는 링크를 실제처럼 씁니다. 확실한 것과 불확실한 것을 나누게 시켜야 합니다. 아래 틀을 복사해 쓰세요.</p>
+
+<h2>바로 쓰는 프롬프트</h2>
+<pre class="prompt">당신은 [분야]를 조사하는 리서처입니다.
+제 질문: [무엇을 알고 싶은지].
+용도: [보고서 근거 / 의사결정 / 학습] 중 무엇인지.
+형식: 1) 확실한 사실 2) 논쟁이 있거나 불확실한 것 3) 제가 직접 확인해야 할 항목, 세 묶음으로 나눠 주세요.
+출처를 지어내지 마세요. 정확한 출처를 모르면 '출처 불명'이라고 쓰고, 대신 어떤 키워드로 검색하면 되는지 알려 주세요.</pre>
+
+<h2>이렇게 채워서 씁니다</h2>
+<p>대괄호를 실제 상황으로 바꾸면 이렇게 됩니다.</p>
+<pre class="prompt">당신은 국내 배달 앱 시장을 조사하는 리서처입니다.
+제 질문: 최근 3년간 국내 배달 앱 시장 규모가 어떻게 변했고, 성장이 둔화됐다면 그 이유가 무엇인지 알고 싶습니다.
+용도: 다음 주 팀 전략 회의에 낼 보고서 근거로 씁니다.
+형식: 1) 확실한 사실 2) 논쟁이 있거나 불확실한 것 3) 제가 직접 확인해야 할 항목, 세 묶음으로 나눠 주세요.
+출처를 지어내지 마세요. 정확한 출처를 모르면 '출처 불명'이라고 쓰고, 대신 어떤 키워드로 검색하면 되는지 알려 주세요.</pre>
+
+<h2>이 프롬프트의 핵심</h2>
+<ul>
+<li><strong>확실·불확실·확인필요로 나누게 한다</strong> — 한 덩어리로 답하면 지어낸 것이 사실 사이에 섞입니다. 나눠 쓰게 하면 위험한 부분이 드러납니다.</li>
+<li><strong>'출처를 지어내지 마라'를 못 박는다</strong> — 이 한 줄이 없으면 없는 논문과 없는 링크가 나옵니다. 모르면 모른다고 쓰게 시킵니다.</li>
+<li><strong>검색 키워드를 대신 받는다</strong> — ChatGPT가 출처를 모를 때 필요한 건 가짜 링크가 아니라 검색 실마리입니다. 확인은 내가 합니다.</li>
+<li><strong>용도를 알려 준다</strong> — 보고서 근거와 가벼운 학습은 요구되는 엄밀함이 다릅니다. 용도를 주면 깊이가 맞춰집니다.</li>
+</ul>
+
+<div class="note"><p><strong>왜 출처는 반드시 직접 확인하나</strong> — 지어낸 출처는 형식이 완벽해서 눈으로는 안 걸러집니다. 링크를 직접 열고, 저자와 연도를 원문에서 확인하세요. 보고서에 들어갈 숫자라면 예외 없이 확인합니다.</p></div>
+
+<h2>더 나아가려면 — 좋은 프롬프트의 4요소</h2>
+<p>지어낸 출처를 막는 것도 결국 프롬프트 뼈대입니다. 좋은 프롬프트에는 뼈대가 있습니다 — 역할·맥락·지시·출력형식. 한 번 익히면 어디에나 응용됩니다. 원리 전체와 프롬프트 10개를 무료로 공개해 두었습니다.</p>
+<a class="cta" href="../free/prompt-4elements.html">좋은 프롬프트의 4요소 — 조사 프롬프트의 뼈대까지 무료로 읽기 →</a>
+
+<h2>정리</h2>
+<ul>
+<li>ChatGPT는 없는 출처를 그럴듯하게 지어낸다. 형식이 완벽해 눈으로 안 걸러진다.</li>
+<li>확실·불확실·확인필요 세 묶음으로 나눠 쓰게 시킨다.</li>
+<li>출처를 모르면 '출처 불명'과 검색 키워드를 받는다.</li>
+<li>보고서에 들어갈 숫자와 링크는 예외 없이 직접 확인한다.</li>
+</ul>
+
+<h2>자주 묻는 질문</h2>
+<div class="faq">
+<h3>검색 기능이 있는 ChatGPT는 출처를 지어내지 않나요?</h3>
+<p>검색으로 찾은 링크는 실제로 존재합니다. 다만 그 링크가 주장을 실제로 뒷받침하는지는 다른 문제입니다. 링크를 열어 해당 대목을 직접 확인하세요.</p>
+<h3>지어낸 출처인지 어떻게 알아채나요?</h3>
+<p>링크를 직접 열어 보면 바로 드러납니다. 열리지 않거나 내용이 다르면 그 근거는 버리세요. 저자와 연도만으로는 판별되지 않습니다.</p>
+<h3>보고서에 ChatGPT 조사 결과를 써도 되나요?</h3>
+<p>원문을 확인한 내용만 쓰세요. 확인하지 못한 숫자와 인용은 빼는 편이 안전합니다. 틀린 근거 하나가 보고서 전체의 신뢰를 무너뜨립니다.</p>
+</div>
+
+<!-- related:start -->
+<h2>관련 글</h2>
+<ul>
+<li><a href="chatgpt-resume.html">ChatGPT로 이력서 쓰는 법 — 경력을 성과 중심으로 압축하는 법</a></li>
+<li><a href="chatgpt-sns-content.html">ChatGPT로 SNS 게시물 쓰는 법 — 첫 줄에서 손을 멈추게</a></li>
+<li><a href="chatgpt-study-learning.html">ChatGPT로 공부하는 법 — 요약만 받지 말고 나를 시험하게 하라</a></li>
+</ul>
+<p style="margin-top:14px">이 글은 <a href="../guide.html"><strong>ChatGPT 업무 활용 완전 가이드</strong></a>의 일부입니다.</p>
+<!-- related:end -->
+<a class="back" href="../index.html">← H.Sol 홈으로</a>
+</div></main>
+<script src="../analytics.js" defer></script>
+</body>
+</html>
