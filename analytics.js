@@ -25,16 +25,18 @@
   gtag("config", MEASUREMENT_ID);
 
   // 퍼널 이벤트 — 무료 자료 열람·PDF 다운로드·크몽 클릭 (전환 경로 추적)
+  // 구체적 행동(.pdf 다운로드·kmong)을 일반 버킷(free/ 웹 열람)보다 먼저 판정한다.
+  // 홈의 PDF 링크는 'free/...pdf' 라 free/ 를 먼저 보면 다운로드가 열람으로 오분류된다.
   document.addEventListener("click", function (e) {
     var a = e.target.closest("a");
     if (!a) return;
     var href = a.getAttribute("href") || "";
-    if (href.indexOf("/free/") > -1 || href.indexOf("free/") === 0) {
-      gtag("event", "free_asset_open", { asset: href });
+    if (href.indexOf("kmong") > -1) {
+      gtag("event", "kmong_click", { asset: href });
     } else if (href.indexOf(".pdf") > -1) {
       gtag("event", "pdf_download", { asset: href });
-    } else if (href.indexOf("kmong") > -1) {
-      gtag("event", "kmong_click", { asset: href });
+    } else if (href.indexOf("/free/") > -1 || href.indexOf("free/") === 0) {
+      gtag("event", "free_asset_open", { asset: href });
     }
   });
 })();
