@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>앨컴통섭연구소 — 검증한 것만 공개합니다</title>
+<meta name="description" content="ChatGPT·AI 업무 자동화를 실무에서 직접 쓰고 검증해 공개합니다. 무료 자료 4종, 실전 가이드 27편, 재고 있는 숫자 전부 공개.">
+<meta property="og:title" content="앨컴통섭연구소 — 검증한 것만 공개합니다">
+<meta property="og:description" content="AI 자동화는 짰는데 통장은 그대로인 사람들에게. 무료 자료 4종 · 실전 가이드 27편 · 숫자 전부 공개.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://blindso.github.io/hsol-site/start.html">
+<meta property="og:image" content="https://blindso.github.io/hsol-site/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://blindso.github.io/hsol-site/start.html">
+<link rel="alternate" type="application/rss+xml" title="H.Sol 실전 가이드" href="https://blindso.github.io/hsol-site/feed.xml">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23211C17%22/><text x=%2250%22 y=%2268%22 font-size=%2252%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22%23D9A441%22>A</text></svg>">
+<style>
+:root{
+  --ink-950:#1A1613; --ink-900:#211C17; --ink-700:#3A332A; --ink-500:#6B6252;
+  --ink-300:#B0A896; --ink-100:#E8E1D2;
+  --gold-600:#8A5E20; --gold-400:#B8892E; --gold-300:#D9A441; --gold-200:#E6C078;
+  --paper:#F1EBDD; --paper-bright:#F8F4EA;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR",sans-serif;
+  background:var(--ink-950); color:var(--paper);
+  line-height:1.7; word-break:keep-all; overflow-wrap:anywhere;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:600px;margin:0 auto;padding:0 22px}
+a{color:inherit;text-decoration:none}
+
+/* ── hero ── */
+.hero{position:relative;padding:64px 0 48px;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;left:50%;top:-180px;width:520px;height:520px;
+  transform:translateX(-50%);
+  background:radial-gradient(circle,rgba(217,164,65,.14) 0%,rgba(217,164,65,0) 68%);
+  pointer-events:none;
+}
+.mark{
+  width:56px;height:56px;border-radius:16px;
+  background:linear-gradient(150deg,var(--ink-700),var(--ink-900));
+  border:1px solid rgba(217,164,65,.42);
+  display:flex;align-items:center;justify-content:center;
+  font-family:Georgia,"Nanum Myeongjo",serif;font-size:28px;font-weight:700;
+  color:var(--gold-300);margin-bottom:22px;position:relative;
+}
+.eyebrow{
+  display:inline-block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold-300);border:1px solid rgba(217,164,65,.38);
+  border-radius:999px;padding:5px 13px;margin-bottom:18px;position:relative;
+}
+h1{
+  font-family:Georgia,"Nanum Myeongjo",serif;
+  font-size:34px;line-height:1.38;font-weight:700;letter-spacing:-.01em;
+  margin-bottom:18px;position:relative;
+}
+h1 em{font-style:normal;color:var(--gold-300)}
+.lede{font-size:16px;color:var(--ink-300);position:relative;max-width:34em}
+.byline{font-size:13.5px;color:var(--ink-500);margin-top:16px;position:relative;max-width:34em}
+.byline b{color:var(--gold-400);font-weight:700}
+.rule{height:1px;background:linear-gradient(90deg,rgba(217,164,65,.5),rgba(217,164,65,0));margin:40px 0 0}
+
+/* ── sections ── */
+section{padding:44px 0}
+h2{
+  font-size:12px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--ink-500);font-weight:700;margin-bottom:20px;
+}
+h2 span{color:var(--gold-400)}
+
+/* ── link cards ── */
+.links{display:flex;flex-direction:column;gap:10px}
+.card{
+  display:block;background:var(--ink-900);border:1px solid var(--ink-700);
+  border-radius:12px;padding:18px 20px;transition:border-color .18s,transform .18s;
+}
+.card:hover{border-color:rgba(217,164,65,.55);transform:translateY(-1px)}
+.card .row{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.card h3{font-size:16px;font-weight:700;color:var(--paper-bright)}
+.card .tag{
+  font-size:11px;font-weight:700;letter-spacing:.06em;white-space:nowrap;
+  color:var(--gold-300);background:rgba(217,164,65,.1);
+  border:1px solid rgba(217,164,65,.3);border-radius:6px;padding:3px 8px;
+}
+.card .tag.mute{color:var(--ink-300);background:transparent;border-color:var(--ink-700)}
+.card p{font-size:14px;color:var(--ink-300);margin-top:6px}
+.card.soon{opacity:.72}
+.card.soon:hover{transform:none;border-color:var(--ink-700)}
+
+/* ── proof ── */
+.proof{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.stat{
+  background:var(--ink-900);border:1px solid var(--ink-700);
+  border-radius:12px;padding:16px 14px;text-align:center;
+}
+.stat b{
+  display:block;font-family:Georgia,serif;font-size:26px;font-weight:700;
+  color:var(--gold-300);font-variant-numeric:tabular-nums;line-height:1.2;
+}
+.stat span{display:block;font-size:12px;color:var(--ink-300);margin-top:5px}
+
+/* ── quote / honesty ── */
+.note{
+  border-left:2px solid var(--gold-400);padding:4px 0 4px 18px;
+  font-size:15px;color:var(--ink-100);
+}
+.note + .note{margin-top:16px}
+.note b{color:var(--gold-200);font-weight:700}
+
+ul.plain{list-style:none}
+ul.plain li{
+  position:relative;padding-left:20px;margin-bottom:10px;
+  font-size:15px;color:var(--ink-100);
+}
+ul.plain li::before{
+  content:"";position:absolute;left:0;top:11px;width:7px;height:1px;background:var(--gold-400);
+}
+
+/* ── cta ── */
+.cta{
+  display:block;text-align:center;background:var(--gold-300);color:var(--ink-950);
+  font-weight:800;font-size:16px;padding:16px;border-radius:12px;margin-top:8px;
+}
+.cta:hover{background:var(--gold-200)}
+.cta small{display:block;font-weight:600;font-size:12.5px;opacity:.72;margin-top:3px}
+
+footer{
+  border-top:1px solid var(--ink-700);margin-top:16px;padding:28px 0 48px;
+  font-size:13px;color:var(--ink-500);
+}
+footer a{color:var(--ink-300);border-bottom:1px solid var(--ink-700)}
+footer p + p{margin-top:8px}
+
+@media(max-width:420px){
+  h1{font-size:27px}
+  .proof{grid-template-columns:1fr;gap:8px}
+  .stat{display:flex;align-items:baseline;justify-content:space-between;text-align:left}
+  .stat span{margin-top:0}
+}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"앨컴통섭연구소","alternateName":"Alchem Transdisciplinary Lab","url":"https://blindso.github.io/hsol-site/start.html","description":"AI를 중심으로 실험하고 협업하는 1인 연구소. 과학부터 인문학까지 연결하고, 실무에서 검증한 AI 활용법을 공개합니다.","founder":{"@type":"Person","name":"H.Sol","jobTitle":"소장·작가","url":"https://blindso.github.io/hsol-site/about.html"}}</script>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="mark">A</div>
+    <span class="eyebrow">앨컴통섭연구소 · ATELIER</span>
+    <h1>AI로 뭘 만들 줄은 아는데,<br><em>통장은 그대로인</em> 분들에게.</h1>
+    <p class="lede">강의도 책도 이미 많습니다. 저는 실무에서 직접 쓰고, 결과를 재고, 안 된 것까지 그대로 공개합니다. 여기 있는 건 전부 제가 써본 것뿐입니다.</p>
+    <p class="byline">앨컴통섭연구소 소장·작가 <b>H.Sol</b> — 연금술사가 현자의 돌을 좇았듯, 지금의 현자의 돌인 AI로 세상의 지혜를 캐는 사람.</p>
+    <div class="rule"></div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2><span>01</span> &nbsp;먼저 가져가세요 — 무료</h2>
+    <div class="links">
+      <a class="card" href="https://blindso.github.io/hsol-site/#free">
+        <div class="row"><h3>실전 프롬프트 무료 자료 4종</h3><span class="tag">회원가입 없음</span></div>
+        <p>업무 이메일 · 엑셀/데이터 · 업무 자동화 · 프롬프트 4요소. 웹으로 바로 읽고, PDF로도 받습니다.</p>
+      </a>
+      <a class="card" href="https://blindso.github.io/hsol-site/guide.html">
+        <div class="row"><h3>ChatGPT 업무 활용 완전 가이드</h3><span class="tag">27편</span></div>
+        <p>이메일·보고서·회의록·엑셀·자동화·마케팅·학습·아이디어. 업무별로 골라 읽는 실전 가이드.</p>
+      </a>
+      <a class="card" href="https://blindso.github.io/hsol-site/numbers/">
+        <div class="row"><h3>공개 실측 — 우리가 재는 숫자</h3><span class="tag">실패 포함</span></div>
+        <p>잘된 숫자만 자랑하지 않습니다. 접은 기획, 새던 집계까지 그대로 둡니다.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span>02</span> &nbsp;왜 이 사람 말을 듣나</h2>
+    <div class="proof">
+      <div class="stat"><b>100개</b><span>검증한 프롬프트</span></div>
+      <div class="stat"><b>27편</b><span>직접 쓴 실전 가이드</span></div>
+      <div class="stat"><b>21개</b><span>경쟁 상품 전수 조사</span></div>
+    </div>
+    <div style="height:22px"></div>
+    <p class="note"><b>수백 개를 써보고 100개만 남겼습니다.</b> "복붙만으로 결과가 나오는가"를 통과 못 한 건 뺐습니다.</p>
+    <p class="note"><b>다음 책 주제를 데이터 보고 접었습니다.</b> 감으로 잡았다가 수요 실측이 12건으로 나와서 접었고, 그 사실도 공개했습니다.</p>
+    <p class="note"><b>못 하는 건 못 한다고 씁니다.</b> ChatGPT가 PPT 파일을 직접 만들어주지 않는다는 것도, 출처를 지어낸다는 것도 그대로 씁니다.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span>03</span> &nbsp;지금 만드는 것</h2>
+    <div class="links">
+      <div class="card soon">
+        <div class="row"><h3>AI 워크플로 자율운영 플레이북</h3><span class="tag mute">준비 중</span></div>
+        <p>자동화는 짰는데 수익으로 이어지지 않는 구간 — 그 마지막 30cm의 배선도. 만드는 과정을 여기 공개하고 있습니다.</p>
+      </div>
+    </div>
+    <div style="height:20px"></div>
+    <ul class="plain">
+      <li>완성되면 이 페이지에 링크가 붙습니다. 링크가 없으면 아직 안 나온 겁니다.</li>
+      <li>가격·환불 조건은 판매 페이지에 숫자로 먼저 적습니다.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <a class="cta" href="https://blindso.github.io/hsol-site/#free">
+      무료 자료부터 받기
+      <small>이메일도, 회원가입도 필요 없습니다</small>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>문의 · 제안 — <a href="mailto:insighton.cs@gmail.com">insighton.cs@gmail.com</a> (영업일 24시간 내 회신)</p>
+    <p><a href="https://blindso.github.io/hsol-site/about.html">발행 전에 무엇을 검증하는지</a> · <a href="https://blindso.github.io/hsol-site/">연구소 홈</a></p>
+    <p style="margin-top:14px;color:var(--ink-700)">© 앨컴통섭연구소 · Alchem Transdisciplinary Lab</p>
+  </div>
+</footer>
+
+</body>
+</html>
