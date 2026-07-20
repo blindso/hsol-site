@@ -9,7 +9,7 @@
  * ID가 비어 있으면 아무것도 로드하지 않는다 (미측정 = 정직하게 미측정).
  */
 (function () {
-  var MEASUREMENT_ID = ""; // ← 여기에 G-XXXXXXXXXX 붙여넣기
+  var MEASUREMENT_ID = "G-EJLQ9RGCQQ"; // GA4 측정 ID (현수 발급 260720)
 
   if (!MEASUREMENT_ID) return;
 
