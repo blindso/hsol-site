@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>무인 자동화 자가진단 체크리스트 — 무료 공개 | H.Sol</title>
+<meta name="description" content="내 자동화, 새벽에 조용히 죽지 않나? 인증·환경의존·중복실행·단일장애점·품질붕괴·예측 6가지 함정을 11문항으로 5분 만에 자가진단. 회원가입 없음.">
+<meta property="og:title" content="무인 자동화 자가진단 체크리스트 — 무료 공개 | H.Sol">
+<meta property="og:description" content="AI로 자동화는 짰는데 무인으로 돌리면 조용히 터지는 지점 6가지. 11문항으로 5분 자가진단. 우리가 실제로 다 겪고 고친 것들입니다.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blindso.github.io/hsol-site/free/automation-selfcheck.html">
+<meta property="og:image" content="https://blindso.github.io/hsol-site/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://blindso.github.io/hsol-site/free/automation-selfcheck.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%231B2A4A%22/><text x=%2250%22 y=%2268%22 font-size=%2252%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22%23F5A623%22>H</text></svg>">
+<style>
+:root{--navy:#1B2A4A;--gold:#F5A623;--warm:#F4F1EC;--ink:#1A1A1A}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR",sans-serif;color:var(--ink);background:#fff;line-height:1.85;word-break:keep-all;overflow-wrap:anywhere}
+.top{background:var(--navy);color:#fff;padding:40px 0}
+.top .wrap p{color:var(--gold);font-size:13px;font-weight:700;margin-bottom:8px}
+.top h1{font-size:26px;font-weight:800;line-height:1.4}
+.wrap{max-width:680px;margin:0 auto;padding:0 24px}
+main{padding:40px 0 64px}
+h2{font-size:21px;color:var(--navy);font-weight:800;margin:44px 0 14px;padding-top:20px;border-top:3px solid var(--warm)}
+h3{font-size:17px;color:var(--navy);font-weight:800;margin:26px 0 10px}
+p{margin-bottom:12px;font-size:16px}
+pre.prompt{background:var(--navy);color:#fff;border-radius:10px;padding:18px 20px;font-size:14.5px;line-height:1.7;overflow-x:auto;margin:14px 0;font-family:"SF Mono",Menlo,monospace;white-space:pre-wrap}
+.note{background:var(--warm);border-left:4px solid var(--gold);border-radius:0 10px 10px 0;padding:14px 18px;margin:16px 0}
+.note p{font-size:14.5px;margin-bottom:6px}
+ul.check{list-style:none;margin:10px 0 6px}
+ul.check li{position:relative;padding-left:30px;margin-bottom:12px;font-size:16px}
+ul.check li::before{content:"☐";position:absolute;left:0;top:-1px;font-size:19px;color:var(--gold);font-weight:700}
+.verdict{background:var(--warm);border-radius:12px;padding:18px 20px;margin:14px 0}
+.verdict p{font-size:15px;margin-bottom:8px}
+.verdict b{color:var(--navy)}
+a{color:var(--navy)}
+.back{display:inline-block;margin-top:32px;background:var(--gold);color:var(--navy);font-weight:800;padding:12px 24px;border-radius:10px;text-decoration:none}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "무인 자동화 자가진단 체크리스트", "description": "인증·환경의존·중복실행·단일장애점·품질붕괴·예측 6가지 함정을 11문항으로 자가진단하는 무료 체크리스트.", "author": {"@type": "Person", "name": "H.Sol"}, "publisher": {"@type": "Organization", "name": "앨컴통섭연구소"}, "url": "https://blindso.github.io/hsol-site/free/automation-selfcheck.html", "inLanguage": "ko"}</script>
+<script src="../analytics.js" defer></script>
+</head>
+<body>
+<div class="top"><div class="wrap">
+<p>앨컴통섭연구소 · 무료 공개 5호</p>
+<h1>무인 자동화 자가진단 체크리스트<br>— 내 시스템, 새벽에 조용히 죽지 않나?</h1>
+</div></div>
+<main><div class="wrap">
+
+<p>AI로 자동화를 짜본 사람이라면 5분 안에 스스로 점검할 수 있게 만들었습니다. 손으로 돌릴 땐 멀쩡한데 무인(크론·스케줄러)으로 넘기면 조용히 터지는 지점들이 있습니다. 아래 6가지가 그것이고, 전부 저희가 실제로 겪고 고친 것들입니다.</p>
+
+<div class="note">
+<p><b>어떻게 쓰나.</b> 각 문항을 읽고 “내 자동화에 이 방어가 있나?”를 스스로 답하세요. 있으면 통과, 없으면 언젠가 조용히 터질 지점입니다. 표시해 두세요.</p>
+<p><b>AI에게 통째로 줘도 됩니다.</b> 이 페이지를 복사해 ChatGPT나 Claude에 붙여넣고 아래처럼 시키면 됩니다.</p>
+</div>
+
+<pre class="prompt">아래는 무인 자동화 점검 기준 6가지입니다.
+내 저장소(또는 아래 붙여넣는 코드)를 이 기준으로 점검하고,
+빠져 있는 방어를 목록으로 알려주세요.
+
+[여기에 체크리스트 붙여넣기]
+[여기에 내 코드 또는 저장소 구조 붙여넣기]</pre>
+
+<h2>1. 인증 — “손으로는 되는데 크론은 안 돼요”</h2>
+<ul class="check">
+<li>내 자동화가 무인(크론·스케줄러)에서도 로그인·인증에 성공하는가? (사람이 로그인한 세션에 기대고 있지 않은가)</li>
+<li>인증이 실패했을 때 그 사실을 내가 알게 되는가? (조용히 죽지 않고 로그가 남는가)</li>
+</ul>
+<div class="note"><p>급소. 사람 로그인 세션과 무인 실행 세션은 다릅니다. OS 금고·브라우저 세션은 무인에서 잠깁니다.</p></div>
+
+<h2>2. 환경 의존 — “내 컴퓨터에선 되는데요”</h2>
+<ul class="check">
+<li>코드에 특정 기계에만 있는 절대 경로를 박아두지 않았는가? (경로가 한 곳으로 추상화돼 있는가)</li>
+<li>다른 기계나 폴더에서 실행해도 같은 결과가 나오는가?</li>
+</ul>
+<div class="note"><p>급소. 무인은 항상 “남의 컴퓨터”에서 돕니다. 하드코딩은 그 기계에서만 돌아갑니다.</p></div>
+
+<h2>3. 중복 실행 — “같은 게 두 번 나갔어요”</h2>
+<ul class="check">
+<li>같은 작업이 두 번 실행돼도 결과가 한 번과 같은가? (고유 ID나 잠금이 있는가)</li>
+<li>발행·결제·전송 같은 되돌릴 수 없는 작업의 기본값이 꺼짐인가?</li>
+</ul>
+<div class="note"><p>급소. 재시도·동시 실행·크론 겹침은 “같은 작업 두 번”을 만들고, 자동화는 의심 없이 두 번 다 합니다.</p></div>
+
+<h2>4. 단일 장애점 — “컴퓨터 껐더니 회사가 멈췄어요”</h2>
+<ul class="check">
+<li>내 자동화가 한 대의 기계에만 묶여 있지 않은가? (그 기계가 꺼지면 전부 멈추는가)</li>
+<li>“무중단”이라고 믿는다면, 실제로 죽여보고 백업이 이어받는 걸 확인했는가?</li>
+</ul>
+<div class="note"><p>급소. 한 대에 다 묶이면 그 한 대가 회사의 한계이자 급소가 됩니다.</p></div>
+
+<h2>5. 품질 붕괴 — “많이 만들어지는데 다 별로예요”</h2>
+<ul class="check">
+<li>자동 생산물에 품질을 판정하는 검사가 있는가? (기본값이 “통과”가 아니라 “차단”인가)</li>
+<li>품질을 숫자로 측정하는가? (느낌이 아니라 점수·기준으로)</li>
+</ul>
+<div class="note"><p>급소. 자동화는 좋은 걸 만들지 않습니다. 시킨 걸 만듭니다. 판정하는 눈이 없으면 대량으로 잘못 만듭니다.</p></div>
+
+<h2>6. 예측 — “열심히 만들었는데 아무도 안 봐요”</h2>
+<ul class="check">
+<li>무엇을 만들지 정할 때 데이터와 수요를 먼저 보는가? (만들고 나서 “왜 안 팔리지” 하지 않는가)</li>
+</ul>
+<div class="note"><p>급소. 가장 앞단의 함정입니다. 방어가 아무리 튼튼해도 아무도 원하지 않는 걸 지키고 있으면 소용없습니다.</p></div>
+
+<h2>결과 해석</h2>
+<div class="verdict">
+<p><b>표시한 게 0개.</b> 탄탄합니다. 다음 자동화에도 이 기준을 유지하세요.</p>
+<p><b>1~2개.</b> 대부분 여기입니다. 표시한 지점이 “언젠가 새벽에 터질” 곳입니다.</p>
+<p><b>3개 이상.</b> 지금 도는 게 운이 좋은 겁니다. 표시한 것부터 하나씩 막으세요.</p>
+</div>
+
+<h2>이 6가지를 어떻게 막나</h2>
+<p>막는 방법은, 실제 사고 사례와 붙여넣어 쓰는 검사 코드까지 저희가 만들고 있는 《AI 자율운영 플레이북》에 담았습니다. <b>아직 판매 전이라 지금은 사실 수 없습니다.</b> 나오면 이 페이지에 링크를 답니다. 링크가 없으면 아직 안 나온 겁니다.</p>
+<p>그때까지는 이 체크리스트만으로도 충분히 쓸모가 있습니다. 표시한 항목 하나만 막아도 오늘 밤 덜 위험해집니다.</p>
+
+<div class="note">
+<p><b>왜 무료인가.</b> 이 6가지는 저희가 실제로 터뜨리고 고친 것들입니다. 겪어보니 미리 알았으면 좋았을 내용이라 그대로 공개합니다. 회원가입도, 이메일 입력도 없습니다.</p>
+</div>
+
+<p style="margin-top:20px">업무별 실전 가이드 전체 → <a href="../guide.html"><strong>ChatGPT 업무 활용 완전 가이드</strong></a></p>
+
+<p style="margin-top:18px"><a class="cta" style="display:inline-block;background:var(--navy);color:#fff;font-weight:800;padding:13px 26px;border-radius:10px;text-decoration:none" href="prompt-4elements.html">다음 무료 자료 — 좋은 프롬프트의 4요소 읽기 →</a></p>
+
+<a class="back" href="../index.html">← 다른 무료 자료 보기</a>
+
+<p style="margin-top:28px;font-size:13.5px;color:#777">발행 · 앨컴통섭연구소 (Alchem Transdisciplinary Lab) · 지은이 H.Sol<br>문의 · <a href="mailto:insighton.cs@gmail.com">insighton.cs@gmail.com</a></p>
+
+</div></main>
+</body>
+</html>
