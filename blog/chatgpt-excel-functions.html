@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="hsol blog_builder">
-<title>ChatGPT로 엑셀 함수 만드는 법 — 이름을 몰라도 결과만 설명하면 | H.Sol</title>
+<title>ChatGPT 엑셀 함수, 이름 몰라도 결과만 설명하면 | H.Sol</title>
 <meta name="description" content="엑셀 함수는 외울 필요가 없습니다. 원하는 결과만 말로 설명하면 ChatGPT가 맞는 함수를 찾아 줍니다. 단, 열 구성을 꼭 알려줘야 합니다.">
-<meta property="og:title" content="ChatGPT로 엑셀 함수 만드는 법 — 이름을 몰라도 결과만 설명하면">
+<meta property="og:title" content="ChatGPT 엑셀 함수, 이름 몰라도 결과만 설명하면">
 <meta property="og:description" content="엑셀 함수는 외울 필요가 없습니다. 원하는 결과만 말로 설명하면 ChatGPT가 맞는 함수를 찾아 줍니다. 단, 열 구성을 꼭 알려줘야 합니다.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://blindso.github.io/hsol-site/blog/chatgpt-excel-functions.html">
@@ -44,14 +44,14 @@ nav.toc a{color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(27
 nav.toc a:hover{border-bottom-color:var(--gold)}
 a.totoc{float:right;font-size:12px;font-weight:700;color:var(--navy);opacity:.45;text-decoration:none;margin-top:6px}
 a.totoc:hover{opacity:1;color:var(--gold)}</style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ChatGPT로 엑셀 함수 만드는 법 — 이름을 몰라도 결과만 설명하면", "description": "엑셀 함수는 외울 필요가 없습니다. 원하는 결과만 말로 설명하면 ChatGPT가 맞는 함수를 찾아 줍니다. 단, 열 구성을 꼭 알려줘야 합니다.", "author": {"@type": "Person", "name": "H.Sol", "url": "https://blindso.github.io/hsol-site/about.html"}, "publisher": {"@type": "Organization", "name": "H.Sol", "logo": {"@type": "ImageObject", "url": "https://blindso.github.io/hsol-site/logo.png"}}, "datePublished": "2026-07-13", "dateModified": "2026-07-13", "url": "https://blindso.github.io/hsol-site/blog/chatgpt-excel-functions.html", "inLanguage": "ko"}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "H.Sol", "item": "https://blindso.github.io/hsol-site/"}, {"@type": "ListItem", "position": 2, "name": "ChatGPT 업무 활용 완전 가이드", "item": "https://blindso.github.io/hsol-site/guide.html"}, {"@type": "ListItem", "position": 3, "name": "ChatGPT로 엑셀 함수 만드는 법 — 이름을 몰라도 결과만 설명하면", "item": "https://blindso.github.io/hsol-site/blog/chatgpt-excel-functions.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ChatGPT 엑셀 함수, 이름 몰라도 결과만 설명하면", "description": "엑셀 함수는 외울 필요가 없습니다. 원하는 결과만 말로 설명하면 ChatGPT가 맞는 함수를 찾아 줍니다. 단, 열 구성을 꼭 알려줘야 합니다.", "author": {"@type": "Person", "name": "H.Sol", "url": "https://blindso.github.io/hsol-site/about.html"}, "publisher": {"@type": "Organization", "name": "H.Sol", "logo": {"@type": "ImageObject", "url": "https://blindso.github.io/hsol-site/logo.png"}}, "datePublished": "2026-07-13", "dateModified": "2026-07-13", "url": "https://blindso.github.io/hsol-site/blog/chatgpt-excel-functions.html", "inLanguage": "ko"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "H.Sol", "item": "https://blindso.github.io/hsol-site/"}, {"@type": "ListItem", "position": 2, "name": "ChatGPT 업무 활용 완전 가이드", "item": "https://blindso.github.io/hsol-site/guide.html"}, {"@type": "ListItem", "position": 3, "name": "ChatGPT 엑셀 함수, 이름 몰라도 결과만 설명하면", "item": "https://blindso.github.io/hsol-site/blog/chatgpt-excel-functions.html"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ChatGPT가 준 함수를 그대로 믿어도 되나요?", "acceptedAnswer": {"@type": "Answer", "text": "먼저 작은 데이터로 시험해 보세요. 함수가 대체로 맞지만 틀릴 때도 있습니다. 결과가 예상과 다르면 조건을 더 자세히 설명하세요."}}, {"@type": "Question", "name": "함수가 오류(#N/A, #REF)가 나면 어떻게 하나요?", "acceptedAnswer": {"@type": "Answer", "text": "오류 메시지를 그대로 붙여넣고 물어보세요. 어떤 함수를 썼는지와 열 구성도 함께 주세요. 원인과 고친 함수를 같이 받습니다."}}, {"@type": "Question", "name": "여러 조건이 겹치는 복잡한 함수도 만들어 주나요?", "acceptedAnswer": {"@type": "Answer", "text": "네, 조건이 여러 개여도 만들어 줍니다. 원하는 규칙을 \"이럴 때는 이렇게\"로 다 적어 주세요. 조건을 빠뜨리면 결과도 빠집니다."}}]}</script>
 </head>
 <body>
 <div class="top"><div class="wrap">
 <p class="k">H.SOL · 실전 가이드</p>
-<h1>ChatGPT로 엑셀 함수 만드는 법 — 이름을 몰라도 결과만 설명하면</h1>
+<h1>ChatGPT 엑셀 함수, 이름 몰라도 결과만 설명하면</h1>
 </div></div>
 <main><div class="wrap">
 
@@ -117,9 +117,9 @@ a.totoc:hover{opacity:1;color:var(--gold)}</style>
 <!-- related:start -->
 <h2>관련 글</h2>
 <ul>
-<li><a href="chatgpt-excel-macro.html">ChatGPT로 엑셀 매크로 만드는 법 — 반복 작업을 버튼 하나로</a></li>
-<li><a href="chatgpt-how-to-use.html">ChatGPT 사용법 — 버튼이 아니라 '물어보는 법'이 진짜다</a></li>
-<li><a href="chatgpt-interview-prep.html">ChatGPT로 면접 준비하는 법 — 예상 질문을 미리 뽑고 답을 다듬는다</a></li>
+<li><a href="chatgpt-excel-macro.html">ChatGPT 엑셀 매크로, 반복 작업을 버튼 하나로</a></li>
+<li><a href="chatgpt-how-to-use.html">ChatGPT 사용법, 버튼이 아니라 묻는 법이 진짜다</a></li>
+<li><a href="chatgpt-interview-prep.html">ChatGPT 면접 준비, 예상 질문 뽑고 답 다듬기</a></li>
 </ul>
 <p style="margin-top:14px">이 글은 <a href="../guide.html"><strong>ChatGPT 업무 활용 완전 가이드</strong></a>의 일부입니다.</p>
 <!-- related:end -->

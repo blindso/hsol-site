@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="hsol blog_builder">
-<title>ChatGPT로 엑셀 매크로 만드는 법 — 반복 작업을 버튼 하나로 | H.Sol</title>
+<title>ChatGPT 엑셀 매크로, 반복 작업을 버튼 하나로 | H.Sol</title>
 <meta name="description" content="엑셀 매크로는 함수와 다릅니다. 여러 단계를 거치는 반복 작업을 버튼 하나로 묶는 기능입니다. 그 자동화 코드를 ChatGPT가 대신 짜 줍니다.">
-<meta property="og:title" content="ChatGPT로 엑셀 매크로 만드는 법 — 반복 작업을 버튼 하나로">
+<meta property="og:title" content="ChatGPT 엑셀 매크로, 반복 작업을 버튼 하나로">
 <meta property="og:description" content="엑셀 매크로는 함수와 다릅니다. 여러 단계를 거치는 반복 작업을 버튼 하나로 묶는 기능입니다. 그 자동화 코드를 ChatGPT가 대신 짜 줍니다.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://blindso.github.io/hsol-site/blog/chatgpt-excel-macro.html">
@@ -44,14 +44,14 @@ nav.toc a{color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(27
 nav.toc a:hover{border-bottom-color:var(--gold)}
 a.totoc{float:right;font-size:12px;font-weight:700;color:var(--navy);opacity:.45;text-decoration:none;margin-top:6px}
 a.totoc:hover{opacity:1;color:var(--gold)}</style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ChatGPT로 엑셀 매크로 만드는 법 — 반복 작업을 버튼 하나로", "description": "엑셀 매크로는 함수와 다릅니다. 여러 단계를 거치는 반복 작업을 버튼 하나로 묶는 기능입니다. 그 자동화 코드를 ChatGPT가 대신 짜 줍니다.", "author": {"@type": "Person", "name": "H.Sol", "url": "https://blindso.github.io/hsol-site/about.html"}, "publisher": {"@type": "Organization", "name": "H.Sol", "logo": {"@type": "ImageObject", "url": "https://blindso.github.io/hsol-site/logo.png"}}, "datePublished": "2026-07-14", "dateModified": "2026-07-14", "url": "https://blindso.github.io/hsol-site/blog/chatgpt-excel-macro.html", "inLanguage": "ko"}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "H.Sol", "item": "https://blindso.github.io/hsol-site/"}, {"@type": "ListItem", "position": 2, "name": "ChatGPT 업무 활용 완전 가이드", "item": "https://blindso.github.io/hsol-site/guide.html"}, {"@type": "ListItem", "position": 3, "name": "ChatGPT로 엑셀 매크로 만드는 법 — 반복 작업을 버튼 하나로", "item": "https://blindso.github.io/hsol-site/blog/chatgpt-excel-macro.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ChatGPT 엑셀 매크로, 반복 작업을 버튼 하나로", "description": "엑셀 매크로는 함수와 다릅니다. 여러 단계를 거치는 반복 작업을 버튼 하나로 묶는 기능입니다. 그 자동화 코드를 ChatGPT가 대신 짜 줍니다.", "author": {"@type": "Person", "name": "H.Sol", "url": "https://blindso.github.io/hsol-site/about.html"}, "publisher": {"@type": "Organization", "name": "H.Sol", "logo": {"@type": "ImageObject", "url": "https://blindso.github.io/hsol-site/logo.png"}}, "datePublished": "2026-07-14", "dateModified": "2026-07-14", "url": "https://blindso.github.io/hsol-site/blog/chatgpt-excel-macro.html", "inLanguage": "ko"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "H.Sol", "item": "https://blindso.github.io/hsol-site/"}, {"@type": "ListItem", "position": 2, "name": "ChatGPT 업무 활용 완전 가이드", "item": "https://blindso.github.io/hsol-site/guide.html"}, {"@type": "ListItem", "position": 3, "name": "ChatGPT 엑셀 매크로, 반복 작업을 버튼 하나로", "item": "https://blindso.github.io/hsol-site/blog/chatgpt-excel-macro.html"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ChatGPT가 준 매크로를 바로 실행해도 되나요?", "acceptedAnswer": {"@type": "Answer", "text": "바로 실행하지 마세요. 원본 파일을 백업하고 복사본에서 먼저 돌려 보세요. 매크로는 실행하면 되돌리기가 어렵습니다."}}, {"@type": "Question", "name": "매크로 코드가 오류가 나면 어떻게 하나요?", "acceptedAnswer": {"@type": "Answer", "text": "오류 메시지를 그대로 붙여넣고 물어보세요. 어떤 작업을 시켰는지와 시트 구성도 함께 주세요. 원인과 고친 코드를 같이 받습니다."}}, {"@type": "Question", "name": "매크로가 제 데이터에 딱 맞게 나오나요?", "acceptedAnswer": {"@type": "Answer", "text": "한 번에 딱 맞지 않을 때도 있습니다. 시트 이름과 열 위치가 실제와 다르면 코드도 어긋납니다. 그 부분을 정확히 알려주고 다시 요청하세요."}}]}</script>
 </head>
 <body>
 <div class="top"><div class="wrap">
 <p class="k">H.SOL · 실전 가이드</p>
-<h1>ChatGPT로 엑셀 매크로 만드는 법 — 반복 작업을 버튼 하나로</h1>
+<h1>ChatGPT 엑셀 매크로, 반복 작업을 버튼 하나로</h1>
 </div></div>
 <main><div class="wrap">
 
@@ -121,9 +121,9 @@ VBA 코드와 실행 방법 3줄로 알려주세요.</pre>
 <!-- related:start -->
 <h2>관련 글</h2>
 <ul>
-<li><a href="chatgpt-how-to-use.html">ChatGPT 사용법 — 버튼이 아니라 '물어보는 법'이 진짜다</a></li>
-<li><a href="chatgpt-interview-prep.html">ChatGPT로 면접 준비하는 법 — 예상 질문을 미리 뽑고 답을 다듬는다</a></li>
-<li><a href="chatgpt-marketing-copy.html">ChatGPT로 마케팅 문구 쓰는 법 — 뻔한 카피가 나오는 진짜 이유</a></li>
+<li><a href="chatgpt-how-to-use.html">ChatGPT 사용법, 버튼이 아니라 묻는 법이 진짜다</a></li>
+<li><a href="chatgpt-interview-prep.html">ChatGPT 면접 준비, 예상 질문 뽑고 답 다듬기</a></li>
+<li><a href="chatgpt-marketing-copy.html">ChatGPT 마케팅 문구, 뻔한 카피가 나오는 이유</a></li>
 </ul>
 <p style="margin-top:14px">이 글은 <a href="../guide.html"><strong>ChatGPT 업무 활용 완전 가이드</strong></a>의 일부입니다.</p>
 <!-- related:end -->
