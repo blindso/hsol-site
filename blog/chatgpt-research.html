@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="hsol blog_builder">
 <title>ChatGPT로 자료 조사하는 법 — 지어낸 출처에 속지 않으려면 | H.Sol</title>
 <meta name="description" content="ChatGPT는 모르는 것도 아는 것처럼 답합니다. 없는 논문과 없는 통계를 그럴듯한 형식으로 내놓습니다. 그래서 조사는 답을 받는 일이 아니라 확인하는 일입니다. 확인을 프롬프트에 넣으면 속을 일이 크게 줄어듭니다.">
 <meta property="og:title" content="ChatGPT로 자료 조사하는 법 — 지어낸 출처에 속지 않으려면">
@@ -32,7 +33,17 @@ pre.prompt{background:var(--navy);color:#fff;border-radius:10px;padding:18px 20p
 .cta{display:inline-block;background:var(--gold);color:var(--navy);font-weight:800;padding:13px 26px;border-radius:10px;text-decoration:none;margin-top:8px}
 .faq h3{font-size:16.5px;color:var(--navy);font-weight:700;margin:18px 0 6px}
 a{color:var(--navy)}
-.back{display:inline-block;margin-top:32px;background:transparent;border:2px solid var(--navy);color:var(--navy);font-weight:800;padding:11px 24px;border-radius:10px;text-decoration:none}</style>
+.back{display:inline-block;margin-top:32px;background:transparent;border:2px solid var(--navy);color:var(--navy);font-weight:800;padding:11px 24px;border-radius:10px;text-decoration:none}
+html{scroll-behavior:smooth}
+h2{scroll-margin-top:14px}
+nav.toc{background:var(--warm);border-radius:12px;padding:16px 20px 14px;margin:22px 0 8px}
+nav.toc p.toc-h{font-size:13px;font-weight:800;color:var(--navy);letter-spacing:.02em;margin-bottom:8px}
+nav.toc ol{margin:0 0 0 18px;padding:0}
+nav.toc li{font-size:15px;margin-bottom:5px}
+nav.toc a{color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(27,42,74,.28)}
+nav.toc a:hover{border-bottom-color:var(--gold)}
+a.totoc{float:right;font-size:12px;font-weight:700;color:var(--navy);opacity:.45;text-decoration:none;margin-top:6px}
+a.totoc:hover{opacity:1;color:var(--gold)}</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ChatGPT로 자료 조사하는 법 — 지어낸 출처에 속지 않으려면", "description": "ChatGPT는 모르는 것도 아는 것처럼 답합니다. 없는 논문과 없는 통계를 그럴듯한 형식으로 내놓습니다. 그래서 조사는 답을 받는 일이 아니라 확인하는 일입니다. 확인을 프롬프트에 넣으면 속을 일이 크게 줄어듭니다.", "author": {"@type": "Person", "name": "H.Sol", "url": "https://blindso.github.io/hsol-site/about.html"}, "publisher": {"@type": "Organization", "name": "H.Sol", "logo": {"@type": "ImageObject", "url": "https://blindso.github.io/hsol-site/logo.png"}}, "datePublished": "2026-07-14", "dateModified": "2026-07-14", "url": "https://blindso.github.io/hsol-site/blog/chatgpt-research.html", "inLanguage": "ko"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "H.Sol", "item": "https://blindso.github.io/hsol-site/"}, {"@type": "ListItem", "position": 2, "name": "ChatGPT 업무 활용 완전 가이드", "item": "https://blindso.github.io/hsol-site/guide.html"}, {"@type": "ListItem", "position": 3, "name": "ChatGPT로 자료 조사하는 법 — 지어낸 출처에 속지 않으려면", "item": "https://blindso.github.io/hsol-site/blog/chatgpt-research.html"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "검색 기능이 있는 ChatGPT는 출처를 지어내지 않나요?", "acceptedAnswer": {"@type": "Answer", "text": "검색으로 찾은 링크는 실제로 존재합니다. 다만 그 링크가 주장을 실제로 뒷받침하는지는 다른 문제입니다. 링크를 열어 해당 대목을 직접 확인하세요."}}, {"@type": "Question", "name": "지어낸 출처인지 어떻게 알아채나요?", "acceptedAnswer": {"@type": "Answer", "text": "링크를 직접 열어 보면 바로 드러납니다. 열리지 않거나 내용이 다르면 그 근거는 버리세요. 저자와 연도만으로는 판별되지 않습니다."}}, {"@type": "Question", "name": "보고서에 ChatGPT 조사 결과를 써도 되나요?", "acceptedAnswer": {"@type": "Answer", "text": "원문을 확인한 내용만 쓰세요. 확인하지 못한 숫자와 인용은 빼는 편이 안전합니다. 틀린 근거 하나가 보고서 전체의 신뢰를 무너뜨립니다."}}]}</script>
@@ -46,17 +57,30 @@ a{color:var(--navy)}
 
 <p>ChatGPT는 모르는 것도 아는 것처럼 답합니다. 없는 논문과 없는 통계를 그럴듯한 형식으로 내놓습니다. 그래서 조사는 답을 받는 일이 아니라 확인하는 일입니다. 확인을 프롬프트에 넣으면 속을 일이 크게 줄어듭니다.</p>
 
-<h2>왜 ChatGPT 출처를 그대로 믿으면 안 되나</h2>
+
+<nav class="toc" id="toc">
+<p class="toc-h">목차</p>
+<ol>
+<li><a href="#s1">왜 ChatGPT 출처를 그대로 믿으면 안 되나</a></li>
+<li><a href="#s2">바로 쓰는 프롬프트</a></li>
+<li><a href="#s3">이렇게 채워서 씁니다</a></li>
+<li><a href="#s4">이 프롬프트의 핵심</a></li>
+<li><a href="#s5">더 나아가려면</a></li>
+<li><a href="#s6">정리</a></li>
+<li><a href="#s7">자주 묻는 질문</a></li>
+</ol>
+</nav>
+<h2 id="s1"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>왜 ChatGPT 출처를 그대로 믿으면 안 되나</h2>
 <p>ChatGPT는 빈칸을 그럴듯하게 채우도록 만들어졌습니다. 그래서 없는 저자와 없는 링크를 실제처럼 씁니다. 확실한 것과 불확실한 것을 나누게 시켜야 합니다. 아래 틀을 복사해 쓰세요.</p>
 
-<h2>바로 쓰는 프롬프트</h2>
+<h2 id="s2"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>바로 쓰는 프롬프트</h2>
 <pre class="prompt">당신은 [분야]를 조사하는 리서처입니다.
 제 질문: [무엇을 알고 싶은지].
 용도: [보고서 근거 / 의사결정 / 학습] 중 무엇인지.
 형식: 1) 확실한 사실 2) 논쟁이 있거나 불확실한 것 3) 제가 직접 확인해야 할 항목, 세 묶음으로 나눠 주세요.
 출처를 지어내지 마세요. 정확한 출처를 모르면 '출처 불명'이라고 쓰고, 대신 어떤 키워드로 검색하면 되는지 알려 주세요.</pre>
 
-<h2>이렇게 채워서 씁니다</h2>
+<h2 id="s3"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>이렇게 채워서 씁니다</h2>
 <p>대괄호를 실제 상황으로 바꾸면 이렇게 됩니다.</p>
 <pre class="prompt">당신은 국내 배달 앱 시장을 조사하는 리서처입니다.
 제 질문: 최근 3년간 국내 배달 앱 시장 규모가 어떻게 변했고, 성장이 둔화됐다면 그 이유가 무엇인지 알고 싶습니다.
@@ -64,7 +88,7 @@ a{color:var(--navy)}
 형식: 1) 확실한 사실 2) 논쟁이 있거나 불확실한 것 3) 제가 직접 확인해야 할 항목, 세 묶음으로 나눠 주세요.
 출처를 지어내지 마세요. 정확한 출처를 모르면 '출처 불명'이라고 쓰고, 대신 어떤 키워드로 검색하면 되는지 알려 주세요.</pre>
 
-<h2>이 프롬프트의 핵심</h2>
+<h2 id="s4"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>이 프롬프트의 핵심</h2>
 <ul>
 <li><strong>확실·불확실·확인필요로 나누게 한다</strong> — 한 덩어리로 답하면 지어낸 것이 사실 사이에 섞입니다. 나눠 쓰게 하면 위험한 부분이 드러납니다.</li>
 <li><strong>'출처를 지어내지 마라'를 못 박는다</strong> — 이 한 줄이 없으면 없는 논문과 없는 링크가 나옵니다. 모르면 모른다고 쓰게 시킵니다.</li>
@@ -74,11 +98,11 @@ a{color:var(--navy)}
 
 <div class="note"><p><strong>왜 출처는 반드시 직접 확인하나</strong> — 지어낸 출처는 형식이 완벽해서 눈으로는 안 걸러집니다. 링크를 직접 열고, 저자와 연도를 원문에서 확인하세요. 보고서에 들어갈 숫자라면 예외 없이 확인합니다.</p></div>
 
-<h2>더 나아가려면 — 좋은 프롬프트의 4요소</h2>
+<h2 id="s5"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>더 나아가려면 — 좋은 프롬프트의 4요소</h2>
 <p>지어낸 출처를 막는 것도 결국 프롬프트 뼈대입니다. 좋은 프롬프트에는 뼈대가 있습니다 — 역할·맥락·지시·출력형식. 한 번 익히면 어디에나 응용됩니다. 원리 전체와 프롬프트 10개를 무료로 공개해 두었습니다.</p>
 <a class="cta" href="../free/prompt-4elements.html">좋은 프롬프트의 4요소 — 조사 프롬프트의 뼈대까지 무료로 읽기 →</a>
 
-<h2>정리</h2>
+<h2 id="s6"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>정리</h2>
 <ul>
 <li>ChatGPT는 없는 출처를 그럴듯하게 지어낸다. 형식이 완벽해 눈으로 안 걸러진다.</li>
 <li>확실·불확실·확인필요 세 묶음으로 나눠 쓰게 시킨다.</li>
@@ -86,7 +110,7 @@ a{color:var(--navy)}
 <li>보고서에 들어갈 숫자와 링크는 예외 없이 직접 확인한다.</li>
 </ul>
 
-<h2>자주 묻는 질문</h2>
+<h2 id="s7"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>자주 묻는 질문</h2>
 <div class="faq">
 <h3>검색 기능이 있는 ChatGPT는 출처를 지어내지 않나요?</h3>
 <p>검색으로 찾은 링크는 실제로 존재합니다. 다만 그 링크가 주장을 실제로 뒷받침하는지는 다른 문제입니다. 링크를 열어 해당 대목을 직접 확인하세요.</p>

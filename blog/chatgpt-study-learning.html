@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="hsol blog_builder">
 <title>ChatGPT로 공부하는 법 — 요약만 받지 말고 나를 시험하게 하라 | H.Sol</title>
 <meta name="description" content="ChatGPT로 공부할 때 대부분 '요약해줘'에서 멈춥니다. 그런데 요약을 읽는 것과 아는 것은 다릅니다. 진짜 학습은 내가 설명하고, AI가 빈틈을 짚어 줄 때 일어납니다. 시키는 방식만 바꾸면 됩니다.">
 <meta property="og:title" content="ChatGPT로 공부하는 법 — 요약만 받지 말고 나를 시험하게 하라">
@@ -32,7 +33,17 @@ pre.prompt{background:var(--navy);color:#fff;border-radius:10px;padding:18px 20p
 .cta{display:inline-block;background:var(--gold);color:var(--navy);font-weight:800;padding:13px 26px;border-radius:10px;text-decoration:none;margin-top:8px}
 .faq h3{font-size:16.5px;color:var(--navy);font-weight:700;margin:18px 0 6px}
 a{color:var(--navy)}
-.back{display:inline-block;margin-top:32px;background:transparent;border:2px solid var(--navy);color:var(--navy);font-weight:800;padding:11px 24px;border-radius:10px;text-decoration:none}</style>
+.back{display:inline-block;margin-top:32px;background:transparent;border:2px solid var(--navy);color:var(--navy);font-weight:800;padding:11px 24px;border-radius:10px;text-decoration:none}
+html{scroll-behavior:smooth}
+h2{scroll-margin-top:14px}
+nav.toc{background:var(--warm);border-radius:12px;padding:16px 20px 14px;margin:22px 0 8px}
+nav.toc p.toc-h{font-size:13px;font-weight:800;color:var(--navy);letter-spacing:.02em;margin-bottom:8px}
+nav.toc ol{margin:0 0 0 18px;padding:0}
+nav.toc li{font-size:15px;margin-bottom:5px}
+nav.toc a{color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(27,42,74,.28)}
+nav.toc a:hover{border-bottom-color:var(--gold)}
+a.totoc{float:right;font-size:12px;font-weight:700;color:var(--navy);opacity:.45;text-decoration:none;margin-top:6px}
+a.totoc:hover{opacity:1;color:var(--gold)}</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ChatGPT로 공부하는 법 — 요약만 받지 말고 나를 시험하게 하라", "description": "ChatGPT로 공부할 때 대부분 '요약해줘'에서 멈춥니다. 그런데 요약을 읽는 것과 아는 것은 다릅니다. 진짜 학습은 내가 설명하고, AI가 빈틈을 짚어 줄 때 일어납니다. 시키는 방식만 바꾸면 됩니다.", "author": {"@type": "Person", "name": "H.Sol", "url": "https://blindso.github.io/hsol-site/about.html"}, "publisher": {"@type": "Organization", "name": "H.Sol", "logo": {"@type": "ImageObject", "url": "https://blindso.github.io/hsol-site/logo.png"}}, "datePublished": "2026-07-13", "dateModified": "2026-07-13", "url": "https://blindso.github.io/hsol-site/blog/chatgpt-study-learning.html", "inLanguage": "ko"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "H.Sol", "item": "https://blindso.github.io/hsol-site/"}, {"@type": "ListItem", "position": 2, "name": "ChatGPT 업무 활용 완전 가이드", "item": "https://blindso.github.io/hsol-site/guide.html"}, {"@type": "ListItem", "position": 3, "name": "ChatGPT로 공부하는 법 — 요약만 받지 말고 나를 시험하게 하라", "item": "https://blindso.github.io/hsol-site/blog/chatgpt-study-learning.html"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ChatGPT가 낸 시험 문제와 채점을 믿어도 되나요?", "acceptedAnswer": {"@type": "Answer", "text": "방향은 참고하되 정답은 교재로 확인하세요. AI는 틀린 문제나 잘못된 채점을 낼 때가 있습니다."}}, {"@type": "Question", "name": "설명을 읽어도 이해가 안 되면 어떻게 하나요?", "acceptedAnswer": {"@type": "Answer", "text": "이해가 안 되면 더 쉬운 예시로 다시 설명해 달라고 하세요. 눈높이를 낮추면 다른 방식으로 풀어 줍니다."}}, {"@type": "Question", "name": "무료 ChatGPT로 공부해도 되나요?", "acceptedAnswer": {"@type": "Answer", "text": "기본 학습은 무료로도 됩니다. 시험 질문과 오답 설명은 무료 버전에서도 작동합니다."}}]}</script>
@@ -46,17 +57,30 @@ a{color:var(--navy)}
 
 <p>ChatGPT로 공부할 때 대부분 '요약해줘'에서 멈춥니다. 그런데 요약을 읽는 것과 아는 것은 다릅니다. 진짜 학습은 내가 설명하고, AI가 빈틈을 짚어 줄 때 일어납니다. 시키는 방식만 바꾸면 됩니다.</p>
 
-<h2>왜 요약만으로는 부족한가</h2>
+
+<nav class="toc" id="toc">
+<p class="toc-h">목차</p>
+<ol>
+<li><a href="#s1">왜 요약만으로는 부족한가</a></li>
+<li><a href="#s2">바로 쓰는 프롬프트</a></li>
+<li><a href="#s3">이렇게 채워서 씁니다</a></li>
+<li><a href="#s4">이 프롬프트의 핵심</a></li>
+<li><a href="#s5">더 나아가려면</a></li>
+<li><a href="#s6">정리</a></li>
+<li><a href="#s7">자주 묻는 질문</a></li>
+</ol>
+</nav>
+<h2 id="s1"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>왜 요약만으로는 부족한가</h2>
 <p>요약을 읽는 것과 아는 것은 다릅니다. 내가 설명하고 AI가 빈틈을 짚을 때 학습이 일어납니다. 학습 목표를 먼저 줘야 합니다. 아래 틀을 복사해 쓰세요.</p>
 
-<h2>바로 쓰는 프롬프트</h2>
+<h2 id="s2"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>바로 쓰는 프롬프트</h2>
 <pre class="prompt">당신은 [과목] 개인 교사입니다.
 제가 [학습 목표: 예: 개념 이해 / 시험 대비]로 아래 내용을 공부합니다.
 먼저 핵심을 3줄로 정리하고, 그다음 저를 시험하는 질문 3개를 내 주세요.
 제 답이 틀리면 어디가 왜 틀렸는지 1줄로 짚어 주세요.
 내용: [붙여넣기]</pre>
 
-<h2>이렇게 채워서 씁니다</h2>
+<h2 id="s3"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>이렇게 채워서 씁니다</h2>
 <p>대괄호를 실제 상황으로 바꾸면 이렇게 됩니다.</p>
 <pre class="prompt">당신은 정보처리기사 필기 개인 교사입니다.
 제가 시험을 앞둔 상황이라 다음 달 정보처리기사 필기 시험 대비로 아래 내용을 공부합니다.
@@ -64,7 +88,7 @@ a{color:var(--navy)}
 제 답이 틀리면 어디가 왜 틀렸는지 1줄로 짚어 주세요.
 내용: 데이터베이스 정규화는 이상 현상을 없애려고 테이블을 나누는 과정이다. 제1정규형은 모든 속성값이 원자값이어야 하고, 제2정규형은 부분 함수 종속을 없애며, 제3정규형은 이행 함수 종속을 없앤다.</pre>
 
-<h2>이 프롬프트의 핵심</h2>
+<h2 id="s4"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>이 프롬프트의 핵심</h2>
 <ul>
 <li><strong>요약 다음에 '시험 질문'을 시킨다</strong> — 읽기만 하면 안다고 착각합니다. 질문에 답해 봐야 진짜 아는지 드러납니다.</li>
 <li><strong>학습 목표를 먼저 준다</strong> — 개념 이해와 시험 대비는 필요한 설명이 다릅니다. 목표를 주면 그에 맞게 가르칩니다.</li>
@@ -74,11 +98,11 @@ a{color:var(--navy)}
 
 <div class="note"><p><strong>왜 오답 이유까지 받나</strong> — 정답만 받으면 다음에 또 틀립니다. 어디가 왜 틀렸는지를 받아야 교정됩니다.</p></div>
 
-<h2>더 나아가려면 — 좋은 프롬프트의 4요소</h2>
+<h2 id="s5"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>더 나아가려면 — 좋은 프롬프트의 4요소</h2>
 <p>AI가 나를 시험하게 만드는 것도 프롬프트 뼈대입니다. 좋은 프롬프트에는 뼈대가 있습니다 — 역할·맥락·지시·출력형식. 한 번 익히면 어디에나 응용됩니다. 원리 전체와 프롬프트 10개를 무료로 공개해 두었습니다.</p>
 <a class="cta" href="../free/prompt-4elements.html">좋은 프롬프트의 4요소 — 학습 프롬프트의 뼈대까지 무료로 읽기 →</a>
 
-<h2>정리</h2>
+<h2 id="s6"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>정리</h2>
 <ul>
 <li>'요약해줘'에서 멈추면 안다고 착각한다. 시험 질문까지 시킨다.</li>
 <li>학습 목표(이해/시험)를 먼저 줘야 그에 맞게 가르친다.</li>
@@ -86,7 +110,7 @@ a{color:var(--navy)}
 <li>AI를 채점기가 아니라 개인 교사 역할로 둔다.</li>
 </ul>
 
-<h2>자주 묻는 질문</h2>
+<h2 id="s7"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>자주 묻는 질문</h2>
 <div class="faq">
 <h3>ChatGPT가 낸 시험 문제와 채점을 믿어도 되나요?</h3>
 <p>방향은 참고하되 정답은 교재로 확인하세요. AI는 틀린 문제나 잘못된 채점을 낼 때가 있습니다.</p>

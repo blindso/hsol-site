@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="hsol blog_builder">
 <title>ChatGPT로 면접 준비하는 법 — 예상 질문을 미리 뽑고 답을 다듬는다 | H.Sol</title>
 <meta name="description" content="면접이 막막한 건 무엇을 물어볼지 몰라서입니다. ChatGPT에 지원 직무를 알려주면 예상 질문을 미리 뽑아 줍니다. 그 질문으로 답을 소리 내 다듬어 볼 수 있습니다.">
 <meta property="og:title" content="ChatGPT로 면접 준비하는 법 — 예상 질문을 미리 뽑고 답을 다듬는다">
@@ -32,7 +33,17 @@ pre.prompt{background:var(--navy);color:#fff;border-radius:10px;padding:18px 20p
 .cta{display:inline-block;background:var(--gold);color:var(--navy);font-weight:800;padding:13px 26px;border-radius:10px;text-decoration:none;margin-top:8px}
 .faq h3{font-size:16.5px;color:var(--navy);font-weight:700;margin:18px 0 6px}
 a{color:var(--navy)}
-.back{display:inline-block;margin-top:32px;background:transparent;border:2px solid var(--navy);color:var(--navy);font-weight:800;padding:11px 24px;border-radius:10px;text-decoration:none}</style>
+.back{display:inline-block;margin-top:32px;background:transparent;border:2px solid var(--navy);color:var(--navy);font-weight:800;padding:11px 24px;border-radius:10px;text-decoration:none}
+html{scroll-behavior:smooth}
+h2{scroll-margin-top:14px}
+nav.toc{background:var(--warm);border-radius:12px;padding:16px 20px 14px;margin:22px 0 8px}
+nav.toc p.toc-h{font-size:13px;font-weight:800;color:var(--navy);letter-spacing:.02em;margin-bottom:8px}
+nav.toc ol{margin:0 0 0 18px;padding:0}
+nav.toc li{font-size:15px;margin-bottom:5px}
+nav.toc a{color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(27,42,74,.28)}
+nav.toc a:hover{border-bottom-color:var(--gold)}
+a.totoc{float:right;font-size:12px;font-weight:700;color:var(--navy);opacity:.45;text-decoration:none;margin-top:6px}
+a.totoc:hover{opacity:1;color:var(--gold)}</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ChatGPT로 면접 준비하는 법 — 예상 질문을 미리 뽑고 답을 다듬는다", "description": "면접이 막막한 건 무엇을 물어볼지 몰라서입니다. ChatGPT에 지원 직무를 알려주면 예상 질문을 미리 뽑아 줍니다. 그 질문으로 답을 소리 내 다듬어 볼 수 있습니다.", "author": {"@type": "Person", "name": "H.Sol", "url": "https://blindso.github.io/hsol-site/about.html"}, "publisher": {"@type": "Organization", "name": "H.Sol", "logo": {"@type": "ImageObject", "url": "https://blindso.github.io/hsol-site/logo.png"}}, "datePublished": "2026-07-14", "dateModified": "2026-07-14", "url": "https://blindso.github.io/hsol-site/blog/chatgpt-interview-prep.html", "inLanguage": "ko"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "H.Sol", "item": "https://blindso.github.io/hsol-site/"}, {"@type": "ListItem", "position": 2, "name": "ChatGPT 업무 활용 완전 가이드", "item": "https://blindso.github.io/hsol-site/guide.html"}, {"@type": "ListItem", "position": 3, "name": "ChatGPT로 면접 준비하는 법 — 예상 질문을 미리 뽑고 답을 다듬는다", "item": "https://blindso.github.io/hsol-site/blog/chatgpt-interview-prep.html"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "실제로 나올 질문과 얼마나 비슷한가요?", "acceptedAnswer": {"@type": "Answer", "text": "자주 나오는 유형은 잘 뽑아 줍니다. 다만 그 회사만의 질문이나 면접관 반응까지는 예측하지 못합니다. 방향을 잡는 용도로 쓰세요."}}, {"@type": "Question", "name": "모의면접처럼 대화로 연습할 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "질문을 하나씩 던져 달라고 하면 됩니다. 제가 답하면 다음 질문으로 넘어갑니다. 실제 면접 흐름을 비슷하게 연습할 수 있습니다."}}, {"@type": "Question", "name": "제 답변도 다듬어 주나요?", "acceptedAnswer": {"@type": "Answer", "text": "답변을 붙여 넣고 피드백을 요청하면 됩니다. 어색한 부분과 보완할 점을 짚어 줍니다. 고칠지는 직접 판단하세요."}}]}</script>
@@ -46,21 +57,34 @@ a{color:var(--navy)}
 
 <p>면접이 막막한 건 무엇을 물어볼지 몰라서입니다. ChatGPT에 지원 직무를 알려주면 예상 질문을 미리 뽑아 줍니다. 그 질문으로 답을 소리 내 다듬어 볼 수 있습니다.</p>
 
-<h2>왜 예상 질문부터 뽑나</h2>
+
+<nav class="toc" id="toc">
+<p class="toc-h">목차</p>
+<ol>
+<li><a href="#s1">왜 예상 질문부터 뽑나</a></li>
+<li><a href="#s2">바로 쓰는 프롬프트</a></li>
+<li><a href="#s3">이렇게 채워서 씁니다</a></li>
+<li><a href="#s4">이 프롬프트의 핵심</a></li>
+<li><a href="#s5">더 나아가려면</a></li>
+<li><a href="#s6">정리</a></li>
+<li><a href="#s7">자주 묻는 질문</a></li>
+</ol>
+</nav>
+<h2 id="s1"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>왜 예상 질문부터 뽑나</h2>
 <p>면접 준비는 예상 질문에서 시작합니다. 무엇을 물을지 알면 답을 미리 정리할 수 있습니다. 직무와 경력만 주면 ChatGPT가 질문을 뽑아 줍니다. 아래 틀을 복사해 쓰세요.</p>
 
-<h2>바로 쓰는 프롬프트</h2>
+<h2 id="s2"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>바로 쓰는 프롬프트</h2>
 <pre class="prompt">당신은 [회사]의 [직무] 면접관입니다. [경력 수준]으로 [직무]에 지원한 저에게 예상 면접 질문 [N]개를 뽑아 주세요.
 각 질문 아래에 그 질문을 왜 묻는지 한 줄로 붙여 주세요.
 제 배경: [핵심 경험·지원 동기]</pre>
 
-<h2>이렇게 채워서 씁니다</h2>
+<h2 id="s3"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>이렇게 채워서 씁니다</h2>
 <p>대괄호를 실제 상황으로 바꾸면 이렇게 됩니다.</p>
 <pre class="prompt">당신은 네이버의 백엔드 개발자 면접관입니다. 신입으로 백엔드 개발자에 지원한 저에게 예상 면접 질문 10개를 뽑아 주세요.
 각 질문 아래에 그 질문을 왜 묻는지 한 줄로 붙여 주세요.
 제 배경: 컴퓨터공학 전공, Spring Boot로 팀 프로젝트 2건, 대용량 트래픽 처리 경험을 쌓고 싶어 지원했습니다.</pre>
 
-<h2>이 프롬프트의 핵심</h2>
+<h2 id="s4"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>이 프롬프트의 핵심</h2>
 <ul>
 <li>지원 직무와 회사를 먼저 알려 줍니다</li>
 <li>예상 질문 개수를 숫자로 못 박습니다</li>
@@ -70,11 +94,11 @@ a{color:var(--navy)}
 
 <div class="note"><p><strong>왜 질문 의도까지 묻나</strong> — 질문 의도를 알면 답의 초점이 잡힙니다. 의도를 모르면 맞는 말이어도 겉도는 답이 나옵니다. 의도를 먼저 물어 두세요.</p></div>
 
-<h2>더 나아가려면 — 좋은 프롬프트의 4요소</h2>
+<h2 id="s5"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>더 나아가려면 — 좋은 프롬프트의 4요소</h2>
 <p>예상 질문을 뽑는 것도 결국 프롬프트 뼈대입니다. 좋은 프롬프트에는 뼈대가 있습니다 — 역할·맥락·지시·출력형식. 한 번 익히면 어디에나 응용됩니다. 원리 전체와 프롬프트 10개를 무료로 공개해 두었습니다.</p>
 <a class="cta" href="../free/prompt-4elements.html">좋은 프롬프트의 4요소 — 면접 프롬프트의 뼈대까지 무료로 읽기 →</a>
 
-<h2>정리</h2>
+<h2 id="s6"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>정리</h2>
 <ul>
 <li>면접 준비는 예상 질문에서 시작합니다</li>
 <li>직무와 경력을 주면 ChatGPT가 질문을 뽑습니다</li>
@@ -82,7 +106,7 @@ a{color:var(--navy)}
 <li>뽑은 질문으로 답을 소리 내 연습합니다</li>
 </ul>
 
-<h2>자주 묻는 질문</h2>
+<h2 id="s7"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>자주 묻는 질문</h2>
 <div class="faq">
 <h3>실제로 나올 질문과 얼마나 비슷한가요?</h3>
 <p>자주 나오는 유형은 잘 뽑아 줍니다. 다만 그 회사만의 질문이나 면접관 반응까지는 예측하지 못합니다. 방향을 잡는 용도로 쓰세요.</p>

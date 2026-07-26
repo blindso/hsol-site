@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="hsol blog_builder">
 <title>ChatGPT로 데이터 분석하는 법 — 숫자가 아니라 '질문'이 먼저다 | H.Sol</title>
 <meta name="description" content="데이터를 ChatGPT에 넣고 '분석해줘'라고 하면 평균·합계 같은 요약만 나옵니다. 정작 필요한 답은 안 나옵니다. 분석은 계산이 아니라 질문입니다. 무엇을 알고 싶은지가 정해져야 데이터가 답을 합니다.">
 <meta property="og:title" content="ChatGPT로 데이터 분석하는 법 — 숫자가 아니라 '질문'이 먼저다">
@@ -32,7 +33,17 @@ pre.prompt{background:var(--navy);color:#fff;border-radius:10px;padding:18px 20p
 .cta{display:inline-block;background:var(--gold);color:var(--navy);font-weight:800;padding:13px 26px;border-radius:10px;text-decoration:none;margin-top:8px}
 .faq h3{font-size:16.5px;color:var(--navy);font-weight:700;margin:18px 0 6px}
 a{color:var(--navy)}
-.back{display:inline-block;margin-top:32px;background:transparent;border:2px solid var(--navy);color:var(--navy);font-weight:800;padding:11px 24px;border-radius:10px;text-decoration:none}</style>
+.back{display:inline-block;margin-top:32px;background:transparent;border:2px solid var(--navy);color:var(--navy);font-weight:800;padding:11px 24px;border-radius:10px;text-decoration:none}
+html{scroll-behavior:smooth}
+h2{scroll-margin-top:14px}
+nav.toc{background:var(--warm);border-radius:12px;padding:16px 20px 14px;margin:22px 0 8px}
+nav.toc p.toc-h{font-size:13px;font-weight:800;color:var(--navy);letter-spacing:.02em;margin-bottom:8px}
+nav.toc ol{margin:0 0 0 18px;padding:0}
+nav.toc li{font-size:15px;margin-bottom:5px}
+nav.toc a{color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(27,42,74,.28)}
+nav.toc a:hover{border-bottom-color:var(--gold)}
+a.totoc{float:right;font-size:12px;font-weight:700;color:var(--navy);opacity:.45;text-decoration:none;margin-top:6px}
+a.totoc:hover{opacity:1;color:var(--gold)}</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ChatGPT로 데이터 분석하는 법 — 숫자가 아니라 '질문'이 먼저다", "description": "데이터를 ChatGPT에 넣고 '분석해줘'라고 하면 평균·합계 같은 요약만 나옵니다. 정작 필요한 답은 안 나옵니다. 분석은 계산이 아니라 질문입니다. 무엇을 알고 싶은지가 정해져야 데이터가 답을 합니다.", "author": {"@type": "Person", "name": "H.Sol", "url": "https://blindso.github.io/hsol-site/about.html"}, "publisher": {"@type": "Organization", "name": "H.Sol", "logo": {"@type": "ImageObject", "url": "https://blindso.github.io/hsol-site/logo.png"}}, "datePublished": "2026-07-13", "dateModified": "2026-07-13", "url": "https://blindso.github.io/hsol-site/blog/chatgpt-data-analysis.html", "inLanguage": "ko"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "H.Sol", "item": "https://blindso.github.io/hsol-site/"}, {"@type": "ListItem", "position": 2, "name": "ChatGPT 업무 활용 완전 가이드", "item": "https://blindso.github.io/hsol-site/guide.html"}, {"@type": "ListItem", "position": 3, "name": "ChatGPT로 데이터 분석하는 법 — 숫자가 아니라 '질문'이 먼저다", "item": "https://blindso.github.io/hsol-site/blog/chatgpt-data-analysis.html"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "엑셀·CSV 파일을 올려서 분석해도 되나요?", "acceptedAnswer": {"@type": "Answer", "text": "네, 파일을 올리면 표를 직접 읽고 계산합니다. 큰 파일이나 잦은 분석은 유료가 안정적입니다. 민감한 개인정보는 지우고 올리세요."}}, {"@type": "Question", "name": "ChatGPT가 계산한 숫자를 믿어도 되나요?", "acceptedAnswer": {"@type": "Answer", "text": "파일을 코드로 계산한 숫자는 대체로 정확합니다. 다만 눈대중으로 답할 때는 틀리기도 합니다. 중요한 수치는 직접 검산하세요."}}, {"@type": "Question", "name": "분석 결과를 그래프로도 그려주나요?", "acceptedAnswer": {"@type": "Answer", "text": "네, 막대·선 그래프를 만들어 줍니다. 어떤 항목을 비교할 그래프인지 말해 주면 정확합니다. 그림이 어색하면 다시 그려달라고 하세요."}}]}</script>
@@ -46,10 +57,23 @@ a{color:var(--navy)}
 
 <p>데이터를 ChatGPT에 넣고 '분석해줘'라고 하면 평균·합계 같은 요약만 나옵니다. 정작 필요한 답은 안 나옵니다. 분석은 계산이 아니라 질문입니다. 무엇을 알고 싶은지가 정해져야 데이터가 답을 합니다.</p>
 
-<h2>왜 '분석해줘'는 요약만 내는가</h2>
+
+<nav class="toc" id="toc">
+<p class="toc-h">목차</p>
+<ol>
+<li><a href="#s1">왜 '분석해줘'는 요약만 내는가</a></li>
+<li><a href="#s2">바로 쓰는 프롬프트</a></li>
+<li><a href="#s3">이렇게 채워서 씁니다</a></li>
+<li><a href="#s4">이 프롬프트의 핵심</a></li>
+<li><a href="#s5">더 나아가려면</a></li>
+<li><a href="#s6">정리</a></li>
+<li><a href="#s7">자주 묻는 질문</a></li>
+</ol>
+</nav>
+<h2 id="s1"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>왜 '분석해줘'는 요약만 내는가</h2>
 <p>질문이 없으면 AI는 안전하게 요약만 합니다. 평균·합계는 분석이 아니라 나열입니다. 무엇을 결정하려는지 먼저 줘야 합니다. 아래 틀을 복사해 쓰세요.</p>
 
-<h2>바로 쓰는 프롬프트</h2>
+<h2 id="s2"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>바로 쓰는 프롬프트</h2>
 <pre class="prompt">당신은 데이터 분석가입니다.
 [의사결정 상황]에서 [알고 싶은 질문]에 답하려 합니다.
 아래 데이터를 보고, 결론 1줄 → 근거 숫자 3개 → 한계 1줄 형식으로 답해 주세요.
@@ -57,7 +81,7 @@ a{color:var(--navy)}
 인상이 아니라 숫자로만 말해 주세요.
 데이터: [붙여넣기]</pre>
 
-<h2>이렇게 채워서 씁니다</h2>
+<h2 id="s3"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>이렇게 채워서 씁니다</h2>
 <p>대괄호를 실제 상황으로 바꾸면 이렇게 됩니다.</p>
 <pre class="prompt">당신은 데이터 분석가입니다.
 다음 분기 온라인 광고 예산을 어느 채널에 더 배분할지 정해야 하는 상황에서, 네이버·인스타그램·유튜브 중 광고비 대비 매출이 가장 좋은 채널이 어디인지에 답하려 합니다.
@@ -66,7 +90,7 @@ a{color:var(--navy)}
 인상이 아니라 숫자로만 말해 주세요.
 데이터: 채널 / 광고비 / 매출 / 전환수 — 네이버 300만원 / 1,200만원 / 240건, 인스타그램 300만원 / 900만원 / 150건, 유튜브 300만원 / 600만원 / 80건.</pre>
 
-<h2>이 프롬프트의 핵심</h2>
+<h2 id="s4"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>이 프롬프트의 핵심</h2>
 <ul>
 <li><strong>질문을 먼저 정한다</strong> — '분석해줘'가 아니라 '무엇을 알고 싶은가'입니다. 질문이 서면 데이터가 그 답을 향해 정리됩니다.</li>
 <li><strong>의사결정 상황을 준다</strong> — 같은 데이터도 무엇을 결정하려는지에 따라 볼 것이 달라집니다. 상황을 주면 그에 맞는 숫자를 꺼냅니다.</li>
@@ -76,11 +100,11 @@ a{color:var(--navy)}
 
 <div class="note"><p><strong>왜 '판단 불가'를 허용하나</strong> — AI는 시키지 않으면 없는 결론도 그럴듯하게 만듭니다. 데이터로 답 못 하는 걸 '판단 불가'로 두게 하면, 지어낸 분석을 믿고 결정하는 사고를 막습니다.</p></div>
 
-<h2>더 나아가려면 — 좋은 프롬프트의 4요소</h2>
+<h2 id="s5"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>더 나아가려면 — 좋은 프롬프트의 4요소</h2>
 <p>데이터에서 답이 나오는 것도 결국 프롬프트 뼈대입니다. 좋은 프롬프트에는 뼈대가 있습니다 — 역할·맥락·지시·출력형식. 한 번 익히면 어디에나 응용됩니다. 원리 전체와 프롬프트 10개를 무료로 공개해 두었습니다.</p>
 <a class="cta" href="../free/prompt-4elements.html">좋은 프롬프트의 4요소 — 분석 프롬프트의 뼈대까지 무료로 읽기 →</a>
 
-<h2>정리</h2>
+<h2 id="s6"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>정리</h2>
 <ul>
 <li>'분석해줘'는 요약만 낸다. 무엇을 알고 싶은지 질문을 먼저 정한다.</li>
 <li>의사결정 상황을 주면 그에 맞는 숫자를 꺼낸다.</li>
@@ -88,7 +112,7 @@ a{color:var(--navy)}
 <li>'판단 불가 표기'로 AI가 없는 인사이트를 지어내는 걸 막는다.</li>
 </ul>
 
-<h2>자주 묻는 질문</h2>
+<h2 id="s7"><a class="totoc" href="#toc" title="목차로">목차 ↑</a>자주 묻는 질문</h2>
 <div class="faq">
 <h3>엑셀·CSV 파일을 올려서 분석해도 되나요?</h3>
 <p>네, 파일을 올리면 표를 직접 읽고 계산합니다. 큰 파일이나 잦은 분석은 유료가 안정적입니다. 민감한 개인정보는 지우고 올리세요.</p>
