@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unattended Automation Checklist | H.Sol</title>
+<meta name="description" content="Your automation works by hand and dies silently once unattended. Six failure modes we hit and fixed, as a 13-point self-check. No signup.">
+<meta property="og:title" content="The Unattended Automation Checklist — 6 ways your automation dies at 3am">
+<meta property="og:description" content="Auth, environment coupling, double execution, single point of failure, quality collapse, and demand. Six failure modes we hit running an AI company unattended. 13 questions, 5 minutes.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blindso.github.io/hsol-site/en/unattended-automation-checklist.html">
+<meta property="og:image" content="https://blindso.github.io/hsol-site/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://blindso.github.io/hsol-site/en/unattended-automation-checklist.html">
+<link rel="alternate" hreflang="ko" href="https://blindso.github.io/hsol-site/free/automation-selfcheck.html">
+<link rel="alternate" hreflang="en" href="https://blindso.github.io/hsol-site/en/unattended-automation-checklist.html">
+<link rel="alternate" hreflang="x-default" href="https://blindso.github.io/hsol-site/en/unattended-automation-checklist.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%231B2A4A%22/><text x=%2250%22 y=%2268%22 font-size=%2252%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22%23F5A623%22>H</text></svg>">
+<style>
+:root{--navy:#1B2A4A;--gold:#F5A623;--warm:#F4F1EC;--ink:#1A1A1A}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,sans-serif;color:var(--ink);background:var(--warm);line-height:1.75}
+.top{background:var(--navy);color:#fff;padding:60px 0}
+.top .k{color:var(--gold);font-size:13px;font-weight:700;letter-spacing:.08em;margin-bottom:10px}
+.top h1{font-size:30px;font-weight:800;line-height:1.32}
+.top p{font-size:16px;opacity:.85;margin-top:14px}
+.wrap{max-width:720px;margin:0 auto;padding:0 24px}
+main{padding:36px 0 64px}
+.card{background:#fff;border-radius:14px;padding:26px 28px;margin-bottom:16px;box-shadow:0 1px 4px rgba(27,42,74,.08)}
+.card h2{font-size:20px;color:var(--navy);font-weight:800;margin-bottom:10px}
+.card h3{font-size:17px;color:var(--navy);font-weight:700;margin:18px 0 6px}
+.card p{font-size:16px;color:#3a3a3a;margin-bottom:12px}
+ul{margin:6px 0 12px 20px}
+li{padding:5px 0;font-size:16px;color:#3a3a3a}
+.why{background:var(--warm);border-left:3px solid var(--gold);padding:10px 14px;font-size:15px;color:#555;margin:8px 0 4px}
+pre{background:#1B2A4A;color:#e8e8e8;padding:16px;border-radius:10px;overflow-x:auto;font-size:13px;line-height:1.6}
+.lang{font-size:14px}
+a{color:var(--navy);font-weight:600}
+footer{border-top:1px solid #ddd;margin-top:26px;padding-top:18px;font-size:13px;color:#777}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="wrap">
+    <div class="k">FREE · NO SIGNUP</div>
+    <h1>The Unattended Automation Checklist</h1>
+    <p>Six ways your automation dies at 3am — and 13 questions to find out which one is waiting for you.</p>
+    <p class="lang"><a href="../free/automation-selfcheck.html" style="color:#F5A623" hreflang="ko">한국어로 보기 →</a></p>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+
+    <div class="card">
+      <p>Automation that works when you run it by hand behaves differently once nobody is watching. We run an AI company where agents do the work unattended, and we hit six distinct failure modes doing it. Every one of them broke at night and we found out in the morning.</p>
+      <p>This is the checklist we wish we'd had. Read each question and answer honestly: <em>does my automation have this defense?</em> If not, that's a place it will eventually fail quietly.</p>
+      <p><strong>You can also hand this to an AI.</strong> Copy this page into ChatGPT or Claude with the prompt below and let it audit your code for you.</p>
+      <pre>You are a senior engineer reviewing a system that runs unattended.
+I operate [describe: e.g. a cron-driven scrape-and-publish pipeline]
+and I want to know whether it is safe when nobody is watching.
+
+Audit my code against the six criteria below and find missing defenses.
+
+[paste the checklist from this page]
+[paste your code or repo structure]
+
+Return a table: item / present or absent / what breaks if absent /
+what to fix first. Mark anything you cannot determine as "unknown" —
+do not guess.</pre>
+    </div>
+
+    <div class="card">
+      <h2>1. Authentication — "it works on my machine, but not from cron"</h2>
+      <ul>
+        <li>Does your job authenticate successfully when run unattended, not just from your logged-in shell?</li>
+        <li>If auth fails, do you find out? (does it log, or die silently?)</li>
+      </ul>
+      <div class="why">Why it bites: a human login session and an unattended process are not the same context. OS keychains and browser sessions are locked to the former. Cron gets neither.</div>
+    </div>
+
+    <div class="card">
+      <h2>2. Environment coupling — "it works on my machine"</h2>
+      <ul>
+        <li>Are absolute paths that exist only on one machine hardcoded anywhere?</li>
+        <li>Does it produce the same result from a different directory or host?</li>
+      </ul>
+      <div class="why">Why it bites: unattended code always runs on "someone else's computer." A hardcoded path works exactly once, on the machine you wrote it on.</div>
+    </div>
+
+    <div class="card">
+      <h2>3. Double execution — "it went out twice"</h2>
+      <ul>
+        <li>If the same job runs twice, is the result identical to running it once? (idempotency key, lock, dedupe)</li>
+        <li>For irreversible actions — publishing, payments, sending — is the default <em>off</em>?</li>
+      </ul>
+      <div class="why">Why it bites: retries, overlapping cron windows, and concurrent triggers all produce "the same job, twice." Automation will happily do both.</div>
+    </div>
+
+    <div class="card">
+      <h2>4. Single point of failure — "I turned off my laptop and the company stopped"</h2>
+      <ul>
+        <li>Is everything tied to one machine? If it powers off, does all of it stop?</li>
+        <li>If you believe you have failover — have you actually killed the primary and watched the backup take over?</li>
+      </ul>
+      <div class="why">Why it bites: if it all sits on one box, that box is both your ceiling and your single point of failure. Untested failover is not failover.</div>
+    </div>
+
+    <div class="card">
+      <h2>5. Quality collapse — "it produces a lot, and it's all mediocre"</h2>
+      <ul>
+        <li>Is there a gate that judges the output? (does it default to <em>block</em> rather than <em>pass</em>?)</li>
+        <li>Is quality measured as a number, not a feeling?</li>
+      </ul>
+      <div class="why">Why it bites: automation does not make good things. It makes the thing you asked for. Without a judging eye, it makes the wrong thing at scale.</div>
+    </div>
+
+    <div class="card">
+      <h2>6. Demand — "I built it and nobody came"</h2>
+      <ul>
+        <li>Do you look at data and demand <em>before</em> deciding what to build?</li>
+      </ul>
+      <div class="why">Why it bites: this is the earliest trap. However solid your defenses, they are worthless if they are guarding something nobody wants.</div>
+    </div>
+
+    <div class="card">
+      <h2>Reading your result</h2>
+      <p><strong>Zero marked.</strong> Solid. Keep the same bar on the next one.</p>
+      <p><strong>One or two.</strong> This is where most systems land. What you marked is where it will break at 3am.</p>
+      <p><strong>Three or more.</strong> The fact that it runs today is luck. Close them one at a time, starting with what you marked.</p>
+    </div>
+
+    <div class="card">
+      <h2>Why this is free</h2>
+      <p>These six are scars, not expertise. We hit every one of them running our own operation, and writing them down felt more useful than selling them. No signup, no email — take it.</p>
+      <p>We are writing the longer version, with the actual incident logs and the check code we now run, as a book. It isn't for sale yet. When it is, a link will appear on this page. If there's no link, it isn't out.</p>
+      <p style="margin-top:16px"><a href="index.html">More from H.Sol →</a></p>
+      <footer>Published by Alchem Transdisciplinary Lab · Written by H.Sol · <a href="mailto:insighton.cs@gmail.com">insighton.cs@gmail.com</a></footer>
+    </div>
+
+  </div>
+</main>
+
+<script src="../analytics.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>H.Sol — running a company on AI agents</title>
+<meta name="description" content="We run an operation where AI agents do the work unattended. It breaks, we find the cause, we publish the fix. Failure logs and checklists, free, no signup.">
+<meta property="og:title" content="H.Sol — running a company on AI agents, and writing down what breaks">
+<meta property="og:description" content="Not screenshots of things that worked. Failure logs, root causes and recovery commits from an operation run by AI agents.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blindso.github.io/hsol-site/en/">
+<meta property="og:image" content="https://blindso.github.io/hsol-site/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://blindso.github.io/hsol-site/en/">
+<link rel="alternate" hreflang="ko" href="https://blindso.github.io/hsol-site/">
+<link rel="alternate" hreflang="en" href="https://blindso.github.io/hsol-site/en/">
+<link rel="alternate" hreflang="x-default" href="https://blindso.github.io/hsol-site/en/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%231B2A4A%22/><text x=%2250%22 y=%2268%22 font-size=%2252%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22%23F5A623%22>H</text></svg>">
+<style>
+:root{--navy:#1B2A4A;--gold:#F5A623;--warm:#F4F1EC;--ink:#1A1A1A}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,sans-serif;color:var(--ink);background:var(--warm);line-height:1.75}
+.top{background:var(--navy);color:#fff;padding:76px 0}
+.top .k{color:var(--gold);font-size:13px;font-weight:700;letter-spacing:.08em;margin-bottom:12px}
+.top h1{font-size:32px;font-weight:800;line-height:1.32;max-width:600px}
+.top p{font-size:17px;opacity:.88;margin-top:16px;max-width:600px}
+.wrap{max-width:720px;margin:0 auto;padding:0 24px}
+main{padding:40px 0 64px}
+.card{background:#fff;border-radius:14px;padding:26px 28px;margin-bottom:16px;box-shadow:0 1px 4px rgba(27,42,74,.08)}
+.card h2{font-size:20px;color:var(--navy);font-weight:800;margin-bottom:10px}
+.card p{font-size:16px;color:#3a3a3a;margin-bottom:12px}
+.item{border-top:1px solid var(--warm);padding:16px 0}
+.item:first-of-type{border-top:0}
+.item a{font-size:17px;font-weight:700;color:var(--navy);text-decoration:none}
+.item p{font-size:15px;color:#666;margin:5px 0 0}
+.cta{display:inline-block;background:var(--gold);color:var(--navy);font-weight:800;padding:12px 22px;border-radius:10px;text-decoration:none;font-size:16px}
+.lang{font-size:14px}
+a{color:var(--navy);font-weight:600}
+footer{border-top:1px solid #ddd;margin-top:26px;padding-top:18px;font-size:13px;color:#777}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="wrap">
+    <div class="k">H.SOL · ALCHEM TRANSDISCIPLINARY LAB</div>
+    <h1>We run a company on AI agents. This is what breaks.</h1>
+    <p>Not screenshots of things that worked. Failure logs, root causes, and the recovery commits — published as we hit them.</p>
+    <p class="lang"><a href="../" style="color:#F5A623" hreflang="ko">한국어 →</a></p>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+
+    <div class="card">
+      <h2>Why this exists</h2>
+      <p>There is no shortage of material on <em>how to build</em> automation. There is very little on what happens on day three, when it is running unattended and stops without telling anyone.</p>
+      <p>We operate that way daily — agents doing the work, humans approving only what is irreversible. So we keep hitting the second category. We write those down instead of the first.</p>
+      <p>Revenue so far is negligible, and we say so rather than implying otherwise. What we have is operating history, and that is what we publish.</p>
+    </div>
+
+    <div class="card">
+      <h2>Free, no signup</h2>
+      <div class="item">
+        <a class="cta" href="unattended-automation-checklist.html">The Unattended Automation Checklist →</a>
+        <p>Six ways automation dies at 3am — auth, environment coupling, double execution, single point of failure, quality collapse, demand. 13 questions, 5 minutes. Includes a prompt so an AI can audit your code against it.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>What we are writing</h2>
+      <p>A longer book of the same material — eight incidents with the actual logs, root cause analysis, and the check code we now run. Not for sale yet. When it is, it will be linked here. If there is no link, it is not out.</p>
+      <p style="margin-top:16px">More material is currently in Korean at <a href="../" hreflang="ko">the Korean site</a>. We are translating the parts that travel.</p>
+      <footer>Published by Alchem Transdisciplinary Lab · Written by H.Sol · <a href="mailto:insighton.cs@gmail.com">insighton.cs@gmail.com</a> · <a href="../privacy.html">Privacy</a></footer>
+    </div>
+
+  </div>
+</main>
+
+<script src="../analytics.js" defer></script>
+</body>
+</html>
