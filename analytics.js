@@ -31,7 +31,12 @@
     var a = e.target.closest("a");
     if (!a) return;
     var href = a.getAttribute("href") || "";
-    if (href.indexOf("kmong") > -1) {
+    // 받아보기(mailto) 를 가장 먼저 판정한다 — 명단이 퍼널의 끝이고,
+    // 이걸 못 세면 명단 0 이 "아무도 안 왔다"인지 "온 걸 못 센다"인지 구분이 안 된다
+    // (260729 실측: mailto 배선이 아예 없어 클릭이 통째로 미계측이었다).
+    if (href.indexOf("mailto:") === 0) {
+      gtag("event", "subscribe_click", { asset: location.pathname });
+    } else if (href.indexOf("kmong") > -1) {
       gtag("event", "kmong_click", { asset: href });
     } else if (href.indexOf(".pdf") > -1) {
       gtag("event", "pdf_download", { asset: href });

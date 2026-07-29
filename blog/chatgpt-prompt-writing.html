@@ -43,7 +43,13 @@ nav.toc li{font-size:15px;margin-bottom:5px}
 nav.toc a{color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(27,42,74,.28)}
 nav.toc a:hover{border-bottom-color:var(--gold)}
 a.totoc{float:right;font-size:12px;font-weight:700;color:var(--navy);opacity:.45;text-decoration:none;margin-top:6px}
-a.totoc:hover{opacity:1;color:var(--gold)}</style>
+a.totoc:hover{opacity:1;color:var(--gold)}
+.subscribe-block{margin-top:34px;padding:22px;border:2px solid var(--gold);border-radius:12px}
+.subscribe-block h3{margin-top:0;font-size:17px;color:var(--navy);font-weight:800;margin-bottom:10px}
+.subscribe-block p{font-size:15px;margin-bottom:10px}
+.subscribe-block p.fine{font-size:13px;color:#888}
+.subscribe-block a{color:#888}
+.subscribe-block a.cta{color:var(--navy);margin-top:6px}</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ChatGPT 프롬프트 작성법, 답의 급을 바꾸는 4가지", "description": "ChatGPT 프롬프트 작성법을 아느냐에서 답의 급이 갈립니다. 같은 모델인데 누구는 쓸 만한 답을 받고 누구는 뻔한 답을 받습니다. 좋은 프롬프트에는 뼈대가 있습니다. 그 뼈대만 익히면 어떤 업무에도 통합니다.", "author": {"@type": "Person", "name": "H.Sol", "url": "https://blindso.github.io/hsol-site/about.html"}, "publisher": {"@type": "Organization", "name": "H.Sol", "logo": {"@type": "ImageObject", "url": "https://blindso.github.io/hsol-site/logo.png"}}, "datePublished": "2026-07-13", "dateModified": "2026-07-13", "url": "https://blindso.github.io/hsol-site/blog/chatgpt-prompt-writing.html", "inLanguage": "ko"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "H.Sol", "item": "https://blindso.github.io/hsol-site/"}, {"@type": "ListItem", "position": 2, "name": "ChatGPT 업무 활용 완전 가이드", "item": "https://blindso.github.io/hsol-site/guide.html"}, {"@type": "ListItem", "position": 3, "name": "ChatGPT 프롬프트 작성법, 답의 급을 바꾸는 4가지", "item": "https://blindso.github.io/hsol-site/blog/chatgpt-prompt-writing.html"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "무료 ChatGPT로도 프롬프트를 잘 쓰면 답이 좋아지나요?", "acceptedAnswer": {"@type": "Answer", "text": "네, 통합니다. 역할·맥락·지시·형식을 갖추면 무료 버전에서도 답의 질이 올라갑니다. 프롬프트 뼈대는 모델 등급과 무관합니다."}}, {"@type": "Question", "name": "프롬프트를 잘 써도 ChatGPT가 틀린 답을 하나요?", "acceptedAnswer": {"@type": "Answer", "text": "네, 틀릴 수 있습니다. 프롬프트는 답의 방향을 잡을 뿐, 사실 여부를 보장하지 않습니다. 중요한 내용은 직접 확인하세요."}}, {"@type": "Question", "name": "프롬프트를 영어로 써야 답이 더 좋나요?", "acceptedAnswer": {"@type": "Answer", "text": "한국어로 써도 됩니다. 한국어 업무는 한국어 프롬프트가 더 자연스럽습니다. 영어로 바꾸기보다 지시를 구체화하는 편이 낫습니다."}}]}</script>
@@ -120,12 +126,22 @@ a.totoc:hover{opacity:1;color:var(--gold)}</style>
 <p>한국어로 써도 됩니다. 한국어 업무는 한국어 프롬프트가 더 자연스럽습니다. 영어로 바꾸기보다 지시를 구체화하는 편이 낫습니다.</p>
 </div>
 
+<div class="subscribe-block">
+<h3>다음 자료를 놓치지 않는 방법</h3>
+<p>이 글은 그냥 읽고 가셔도 됩니다. 가입도 이메일도 필요 없습니다.</p>
+<p>다만 새 자료가 나올 때 알 방법이 없다는 말을 들었습니다. 매주 만드는 카드와 새 무료 자료를 <strong>주 1회</strong> 메일로 보냅니다.</p>
+<p class="fine">광고·판매 메일은 보내지 않습니다. 해지는 답장 한 줄이면 됩니다.</p>
+<p><a class="cta" href="mailto:insighton.cs@gmail.com?subject=%5B%EB%B0%9B%EC%95%84%EB%B3%B4%EA%B8%B0%5D%20%EC%A3%BC%EA%B0%84%20%ED%94%84%EB%A1%AC%ED%94%84%ED%8A%B8%20%EC%B9%B4%EB%93%9C&body=%EC%9D%B4%20%EB%A9%94%EC%9D%BC%EC%9D%84%20%EA%B7%B8%EB%8C%80%EB%A1%9C%20%EB%B3%B4%EB%82%B4%EC%8B%9C%EB%A9%B4%20%EB%93%B1%EB%A1%9D%EB%90%A9%EB%8B%88%EB%8B%A4.">메일로 받아보기 →</a></p>
+<p class="fine">버튼을 누르면 메일 앱이 열립니다. 내용은 이미 적혀 있으니 그대로 보내시면 됩니다 — <a href="../privacy.html">개인정보 처리방침</a>.</p>
+</div>
+
 <!-- related:start -->
 <h2>관련 글</h2>
 <ul>
 <li><a href="chatgpt-report-writing.html">ChatGPT 보고서 작성, 데이터를 판단 재료로</a></li>
 <li><a href="chatgpt-research.html">ChatGPT 자료 조사, 지어낸 출처에 안 속으려면</a></li>
 <li><a href="chatgpt-resume.html">ChatGPT 이력서, 경력을 성과 중심으로 압축하기</a></li>
+<li><a href="chatgpt-business-proposal.html">ChatGPT 기획서 제안서, 통과되는 글은 구조가 다르다</a></li>
 </ul>
 <p style="margin-top:14px">이 글은 <a href="../guide.html"><strong>ChatGPT 업무 활용 완전 가이드</strong></a>의 일부입니다.</p>
 <!-- related:end -->
