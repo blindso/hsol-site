@@ -7,3 +7,5 @@
 {"ts":"2026-07-27T00:40:22.388Z","gate":"gate-witness","verdict":"verified","commit":"8af95a322975","marked_at":"2026-07-27T00:40:22.282Z"}
 {"ts":"2026-07-27T14:49:01.919Z","gate":"gate-witness","verdict":"verified","commit":"a7b364dd894a","marked_at":"2026-07-27T14:49:01.793Z"}
 {"ts":"2026-07-29T12:48:17.361Z","gate":"gate-witness","verdict":"verified","commit":"e5ccf5ad23ac","marked_at":"2026-07-29T12:48:17.170Z"}
+{"ts":"2026-08-01T05:40:07.388Z","gate":"gate-witness","verdict":"verified","commit":"2efba21193c0","marked_at":"2026-08-01T05:40:07.290Z"}
+{"ts":"2026-08-01T05:50:29.965Z","gate":"gate-witness","verdict":"verified","commit":"af9fed9cac84","marked_at":"2026-08-01T05:50:29.890Z"}
