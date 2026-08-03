@@ -9,3 +9,5 @@
 {"ts":"2026-07-29T12:48:17.361Z","gate":"gate-witness","verdict":"verified","commit":"e5ccf5ad23ac","marked_at":"2026-07-29T12:48:17.170Z"}
 {"ts":"2026-08-01T05:40:07.388Z","gate":"gate-witness","verdict":"verified","commit":"2efba21193c0","marked_at":"2026-08-01T05:40:07.290Z"}
 {"ts":"2026-08-01T05:50:29.965Z","gate":"gate-witness","verdict":"verified","commit":"af9fed9cac84","marked_at":"2026-08-01T05:50:29.890Z"}
+{"ts":"2026-08-02T18:31:12.218Z","gate":"gate-witness","verdict":"verified","commit":"91b7a8b7f28e","marked_at":"2026-08-02T18:31:12.080Z"}
+{"ts":"2026-08-02T21:46:50.880Z","gate":"gate-witness","verdict":"verified","commit":"84479abd4c3e","marked_at":"2026-08-02T21:46:50.785Z"}
