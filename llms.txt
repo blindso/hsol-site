@@ -38,6 +38,7 @@ H.Sol 은 ChatGPT 를 업무에 쓰는 실전 방법을 다룬다. 각 글은 �
 - [ChatGPT SNS 콘텐츠, 첫 줄에서 손을 멈추게](https://blindso.github.io/hsol-site/blog/chatgpt-sns-content.html): ChatGPT SNS 콘텐츠는 길이가 아니라 첫 줄에서 승부가 납니다. 스크롤을 멈추게 하지 못하면 나머지는 읽히지 않습니다. 플랫폼과 첫 줄 조건을 주면 짧은 호흡의 초안이 나옵니다.
 - [ChatGPT 공부 활용, 요약 말고 나를 시험하게](https://blindso.github.io/hsol-site/blog/chatgpt-study-learning.html): ChatGPT 공부 활용은 대부분 '요약해줘'에서 멈춥니다. 그런데 요약을 읽는 것과 아는 것은 다릅니다. 진짜 학습은 내가 설명하고, AI가 빈틈을 짚어 줄 때 일어납니다. 시키는 방식만 바꾸면 됩니다.
 - [ChatGPT 요약, '요약해줘'가 핵심을 빼먹는 이유](https://blindso.github.io/hsol-site/blog/chatgpt-summarize-long-text.html): 긴 보고서나 기사를 ChatGPT에 넣고 '요약해줘'라고 하면, 정작 내게 필요한 부분은 빠지고 엉뚱한 게 남기도 합니다. 요약은 '무엇을 위해 줄이느냐'가 정해져야 쓸모가 생깁니다. 목적을 주면 요약의 질이 달라집니다.
+- [ChatGPT 주간보고 작성, 나열 말고 세 칸으로](https://blindso.github.io/hsol-site/blog/chatgpt-weekly-report.html): ChatGPT 주간보고 작성 프롬프트. 한 일 목록을 결과·막힌 것·다음 주 계획 세 칸으로 옮기고, 없는 숫자는 [확인 필요]로 받는 틀.
 - [ChatGPT 업무 자동화, 매번 새로 시키지 않는 3단계](https://blindso.github.io/hsol-site/blog/chatgpt-work-automation.html): 매일 같은 일을 ChatGPT에 시키면서 매번 처음부터 설명하고 있다면, 그건 자동화가 아닙니다. 반복 업무는 한 번만 잘 설계해 두면 다음부터는 붙여넣기만 하면 됩니다. 핵심은 '나만의 업무 틀'을 만드는 것입니다.
 
 ## 무료 자료

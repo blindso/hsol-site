@@ -195,6 +195,13 @@
 <enclosure url="https://blindso.github.io/hsol-site/og-default.png" type="image/png" length="0"/>
 </item>
 <item>
+<title>ChatGPT 주간보고 작성, 나열 말고 세 칸으로</title>
+<link>https://blindso.github.io/hsol-site/blog/chatgpt-weekly-report.html</link>
+<guid>https://blindso.github.io/hsol-site/blog/chatgpt-weekly-report.html</guid>
+<description>ChatGPT 주간보고 작성 프롬프트. 한 일 목록을 결과·막힌 것·다음 주 계획 세 칸으로 옮기고, 없는 숫자는 [확인 필요]로 받는 틀.</description>
+<enclosure url="https://blindso.github.io/hsol-site/og-default.png" type="image/png" length="0"/>
+</item>
+<item>
 <title>ChatGPT 업무 자동화, 매번 새로 시키지 않는 3단계</title>
 <link>https://blindso.github.io/hsol-site/blog/chatgpt-work-automation.html</link>
 <guid>https://blindso.github.io/hsol-site/blog/chatgpt-work-automation.html</guid>
