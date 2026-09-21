@@ -28,3 +28,5 @@
 {"ts":"2026-09-08T12:34:20.277Z","gate":"gate-witness","verdict":"verified","commit":"1c847edb2f9b","marked_at":"2026-09-08T12:34:20.204Z"}
 {"ts":"2026-09-08T12:43:39.770Z","gate":"gate-witness","verdict":"verified","commit":"7c978aba15da","marked_at":"2026-09-08T12:43:39.701Z"}
 {"ts":"2026-09-09T00:55:16.190Z","gate":"gate-witness","verdict":"verified","commit":"e674a8a1436f","marked_at":"2026-09-09T00:55:16.098Z"}
+{"ts":"2026-09-14T00:41:50.739Z","gate":"gate-witness","verdict":"verified","commit":"8d146e385ac8","marked_at":"2026-09-14T00:41:50.662Z"}
+{"ts":"2026-09-15T03:19:09.419Z","gate":"gate-witness","verdict":"verified","commit":"f5afcc35f75e","marked_at":"2026-09-15T03:19:09.348Z"}
